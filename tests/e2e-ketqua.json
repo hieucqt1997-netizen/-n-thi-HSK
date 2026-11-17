@@ -1,0 +1,177 @@
+[
+ {
+  "name": "Mở app, có thanh điều hướng dưới 5 mục",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "HSK 1 chưa tải: hiển thị trung thực \"Chưa có dữ liệu\"",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Tải gói HSK 1 vào IndexedDB",
+  "pass": true,
+  "extra": "80"
+ },
+ {
+  "name": "Kiểm tra gói đủ offline",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Không có thanh cuộn ngang (iPhone)",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Chấm mức nhớ lưu lịch ôn",
+  "pass": true,
+  "extra": "5"
+ },
+ {
+  "name": "Thẻ \"Quên\" ghi vào sổ lỗi",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Gõ pinyin sai -> báo chưa đúng",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Mở lại vẫn giữ tiến độ",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Điền chữ Hán đúng -> Đúng",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Sắp xếp câu đúng -> Đúng",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Chạm tra từ trong bài đọc",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Thiếu giọng tiếng Trung: nút Phát bị khóa và có thông báo",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Trang Hôm nay báo bài thi dở",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Bài thi tự lưu đáp án và đánh dấu sau khi tải lại",
+  "pass": true,
+  "extra": "[1]"
+ },
+ {
+  "name": "Không hiện đáp án trước khi nộp",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Có kết quả, đáp án và nút làm lại câu sai",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Mô phỏng thi: quá giờ kết thúc thì tự nộp",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Sổ lỗi sai có mục",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "CSV sai: báo lỗi theo dòng",
+  "pass": true,
+  "extra": "1 dòng hợp lệ (1 mới, 0 cập nhật id đã có) · 3 dòng lỗi\nDòng 3: thiếu \"hanzi\"\nDòng 4: level phải là số 1–9; cột hanzi kh"
+ },
+ {
+  "name": "JSON gói sai: báo lỗi trường thiếu",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Gói thiếu tệp âm thanh: báo rõ tên tệp thiếu",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Tệp sao lưu có định dạng và phiên bản",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Đã xóa tiến độ (giả lập mất dữ liệu)",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Tệp sao lưu phiên bản mới hơn bị từ chối",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Phục hồi lại đủ tiến độ",
+  "pass": true,
+  "extra": "5"
+ },
+ {
+  "name": "Gộp lần 2 không nhân đôi dữ liệu",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Mở lại khi mất mạng: app chạy từ bộ đệm",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Offline: xem từ vựng",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Offline: học thẻ và lưu tiến độ",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Cập nhật lên 1.0.1 sau khi bấm Cập nhật",
+  "pass": true,
+  "extra": "Phiên bản 1.0.1"
+ },
+ {
+  "name": "Cập nhật không mất tiến độ",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Máy tính: thanh điều hướng bên trái hiển thị",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Cỡ chữ 130% vẫn không cuộn ngang",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Không có lỗi JavaScript",
+  "pass": true,
+  "extra": "[]"
+ }
+]

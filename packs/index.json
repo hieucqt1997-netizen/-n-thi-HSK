@@ -1,0 +1,50 @@
+{
+ "format": "sotay-hsk-index",
+ "updated": "2026-11-17",
+ "packs": [
+  {
+   "id": "hsk1-core",
+   "level": 1,
+   "title": "HSK 1 · Gói cơ bản (tự biên soạn)",
+   "version": "1.0.0",
+   "url": "packs/hsk1/pack.json",
+   "status": "available",
+   "bytes": 64715
+  },
+  {
+   "id": "hsk2-core",
+   "level": 2,
+   "title": "HSK 2",
+   "status": "none",
+   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+  },
+  {
+   "id": "hsk3-core",
+   "level": 3,
+   "title": "HSK 3",
+   "status": "none",
+   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+  },
+  {
+   "id": "hsk4-core",
+   "level": 4,
+   "title": "HSK 4",
+   "status": "none",
+   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+  },
+  {
+   "id": "hsk5-core",
+   "level": 5,
+   "title": "HSK 5",
+   "status": "none",
+   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+  },
+  {
+   "id": "hsk6-core",
+   "level": 6,
+   "title": "HSK 6",
+   "status": "none",
+   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "format": "sotay-hsk-pack",
+ "formatVersion": 1,
+ "id": "my-pack-1",
+ "level": 2,
+ "version": "1.0.0",
+ "title": "Gói tự soạn mẫu",
+ "hskVersion": "hsk3",
+ "source": "Tự biên soạn",
+ "license": "Dùng cá nhân",
+ "words": [
+  {
+   "id": "my2-yifu",
+   "hanzi": "衣服",
+   "pinyin": "yīfu",
+   "vi": "quần áo",
+   "pos": "danh từ",
+   "level": 2,
+   "lesson": "Bài 1",
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "我想买衣服。",
+     "py": "Wǒ xiǎng mǎi yīfu.",
+     "vi": "Tôi muốn mua quần áo."
+    }
+   ],
+   "confusable": [],
+   "audio": "yifu.mp3"
+  }
+ ],
+ "grammar": [
+  {
+   "id": "my2-g-1",
+   "level": 2,
+   "title": "Tên mẫu câu",
+   "pattern": "A + 比 + B + tính từ",
+   "explain": "Giải thích bằng tiếng Việt.",
+   "examples": [
+    {
+     "zh": "…",
+     "py": "…",
+     "vi": "…"
+    }
+   ],
+   "compare": "",
+   "questions": [
+    "my2-q-1"
+   ]
+  }
+ ],
+ "readings": [],
+ "listening": [
+  {
+   "id": "my2-l-1",
+   "level": 2,
+   "title": "Bài nghe mẫu",
+   "audio": "bai1.mp3",
+   "transcript": "女：……",
+   "lines": [
+    {
+     "who": "女",
+     "zh": "……",
+     "py": ""
+    }
+   ],
+   "vi": "Bản dịch",
+   "questions": [
+    "my2-q-2"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "my2-q-1",
+   "level": 2,
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Câu hỏi…",
+   "options": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answer": 0,
+   "explain": "Giải thích",
+   "difficulty": 1
+  },
+  {
+   "id": "my2-q-2",
+   "level": 2,
+   "skill": "listening",
+   "type": "listen-choice",
+   "listen": "my2-l-1",
+   "prompt": "Câu hỏi nghe…",
+   "options": [
+    "A",
+    "B",
+    "C"
+   ],
+   "answer": 1,
+   "explain": ""
+  },
+  {
+   "id": "my2-q-3",
+   "level": 2,
+   "skill": "writing",
+   "type": "fill",
+   "input": "pinyin",
+   "checkTones": true,
+   "prompt": "Gõ pinyin của 衣服",
+   "answer": "yīfu",
+   "accept": [
+    "yi1fu"
+   ],
+   "explain": ""
+  },
+  {
+   "id": "my2-q-4",
+   "level": 2,
+   "skill": "writing",
+   "type": "order",
+   "prompt": "Sắp xếp",
+   "tokens": [
+    "买",
+    "我",
+    "衣服",
+    "想"
+   ],
+   "answer": "我想买衣服",
+   "explain": ""
+  }
+ ],
+ "audioFiles": [
+  "yifu.mp3",
+  "bai1.mp3"
+ ],
+ "_huong_dan": "Chọn tệp JSON này CÙNG các tệp MP3 có tên trong audioFiles khi nhập. Loại câu: choice, listen-choice, fill (input: hanzi|pinyin), order (tokens), open (tự đánh giá)."
+}

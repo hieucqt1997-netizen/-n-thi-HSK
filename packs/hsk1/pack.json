@@ -1,0 +1,2875 @@
+{
+ "format": "sotay-hsk-pack",
+ "formatVersion": 1,
+ "id": "hsk1-core",
+ "level": 1,
+ "version": "1.0.0",
+ "title": "HSK 1 · Gói cơ bản (tự biên soạn)",
+ "hskVersion": "hsk2",
+ "hskVersionNote": "Từ vựng chọn từ danh sách HSK 2.0 cấp 1. Chưa đối chiếu đề cương HSK 3.0 (áp dụng cho kỳ thi từ 13/12/2026 theo thông tin công bố) — trạng thái: CẦN KIỂM TRA.",
+ "source": "Tự biên soạn cho Sổ tay HSK. Câu ví dụ, bài đọc, hội thoại nghe đều tự viết; không sao chép giáo trình hay đề thi.",
+ "license": "Dùng cá nhân. Người dùng tự chịu trách nhiệm khi phân phối lại.",
+ "reviewed": "Rà soát bởi người soạn (AI), chưa qua giáo viên. Nên nhờ giáo viên kiểm tra lại.",
+ "words": [
+  {
+   "id": "h1-ni",
+   "hanzi": "你",
+   "pinyin": "nǐ",
+   "vi": "bạn, anh, chị (ngôi thứ hai)",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 0,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "你好！",
+     "py": "Nǐ hǎo!",
+     "vi": "Xin chào!"
+    }
+   ],
+   "confusable": [
+    "您"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-hao",
+   "hanzi": "好",
+   "pinyin": "hǎo",
+   "vi": "tốt, khỏe, hay",
+   "pos": "tính từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 1,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "我很好。",
+     "py": "Wǒ hěn hǎo.",
+     "vi": "Tôi rất khỏe."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-nin",
+   "hanzi": "您",
+   "pinyin": "nín",
+   "vi": "ngài, ông, bà (kính trọng)",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 2,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "您好！",
+     "py": "Nín hǎo!",
+     "vi": "Chào ngài!"
+    }
+   ],
+   "confusable": [
+    "你"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-wo",
+   "hanzi": "我",
+   "pinyin": "wǒ",
+   "vi": "tôi, mình",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 3,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "我是学生。",
+     "py": "Wǒ shì xuésheng.",
+     "vi": "Tôi là học sinh."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-ta_m",
+   "hanzi": "他",
+   "pinyin": "tā",
+   "vi": "anh ấy, ông ấy",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 4,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "他是我朋友。",
+     "py": "Tā shì wǒ péngyou.",
+     "vi": "Anh ấy là bạn tôi."
+    }
+   ],
+   "confusable": [
+    "她"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-ta_f",
+   "hanzi": "她",
+   "pinyin": "tā",
+   "vi": "cô ấy, bà ấy",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 5,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "她是老师。",
+     "py": "Tā shì lǎoshī.",
+     "vi": "Cô ấy là giáo viên."
+    }
+   ],
+   "confusable": [
+    "他"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-women",
+   "hanzi": "我们",
+   "pinyin": "wǒmen",
+   "vi": "chúng tôi, chúng ta",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 6,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "我们是同学。",
+     "py": "Wǒmen shì tóngxué.",
+     "vi": "Chúng tôi là bạn học."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-hen",
+   "hanzi": "很",
+   "pinyin": "hěn",
+   "vi": "rất",
+   "pos": "phó từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 7,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "我很高兴。",
+     "py": "Wǒ hěn gāoxìng.",
+     "vi": "Tôi rất vui."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xiexie",
+   "hanzi": "谢谢",
+   "pinyin": "xièxie",
+   "vi": "cảm ơn",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 8,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "谢谢你！",
+     "py": "Xièxie nǐ!",
+     "vi": "Cảm ơn bạn!"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-bukeqi",
+   "hanzi": "不客气",
+   "pinyin": "bú kèqi",
+   "vi": "đừng khách sáo, không có gì",
+   "pos": "cụm từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 9,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "谢谢！——不客气。",
+     "py": "Xièxie! — Bú kèqi.",
+     "vi": "Cảm ơn! — Không có gì."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-zaijian",
+   "hanzi": "再见",
+   "pinyin": "zàijiàn",
+   "vi": "tạm biệt",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 10,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "老师，再见！",
+     "py": "Lǎoshī, zàijiàn!",
+     "vi": "Em chào thầy/cô ạ (tạm biệt)!"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-duibuqi",
+   "hanzi": "对不起",
+   "pinyin": "duìbuqǐ",
+   "vi": "xin lỗi",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 11,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "对不起，我不认识他。",
+     "py": "Duìbuqǐ, wǒ bú rènshi tā.",
+     "vi": "Xin lỗi, tôi không quen anh ấy."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-meiguanxi",
+   "hanzi": "没关系",
+   "pinyin": "méi guānxi",
+   "vi": "không sao, không có gì",
+   "pos": "cụm từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 12,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "对不起！——没关系。",
+     "py": "Duìbuqǐ! — Méi guānxi.",
+     "vi": "Xin lỗi! — Không sao."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-bu",
+   "hanzi": "不",
+   "pinyin": "bù",
+   "vi": "không (phủ định)",
+   "pos": "phó từ",
+   "level": 1,
+   "lesson": "Bài 1 · Chào hỏi",
+   "lessonNo": 1,
+   "order": 13,
+   "topic": "Giao tiếp",
+   "ex": [
+    {
+     "zh": "我不是老师。",
+     "py": "Wǒ bú shì lǎoshī.",
+     "vi": "Tôi không phải giáo viên."
+    }
+   ],
+   "confusable": [
+    "没"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shi",
+   "hanzi": "是",
+   "pinyin": "shì",
+   "vi": "là",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 14,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "他是中国人。",
+     "py": "Tā shì Zhōngguó rén.",
+     "vi": "Anh ấy là người Trung Quốc."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-jiao",
+   "hanzi": "叫",
+   "pinyin": "jiào",
+   "vi": "gọi, tên là",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 15,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "我叫王明。",
+     "py": "Wǒ jiào Wáng Míng.",
+     "vi": "Tôi tên là Vương Minh."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shenme",
+   "hanzi": "什么",
+   "pinyin": "shénme",
+   "vi": "gì, cái gì",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 16,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "你叫什么名字？",
+     "py": "Nǐ jiào shénme míngzi?",
+     "vi": "Bạn tên là gì?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-mingzi",
+   "hanzi": "名字",
+   "pinyin": "míngzi",
+   "vi": "tên",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 17,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "你的名字是什么？",
+     "py": "Nǐ de míngzi shì shénme?",
+     "vi": "Tên của bạn là gì?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-zhongguo",
+   "hanzi": "中国",
+   "pinyin": "Zhōngguó",
+   "vi": "Trung Quốc",
+   "pos": "danh từ riêng",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 18,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "我想去中国。",
+     "py": "Wǒ xiǎng qù Zhōngguó.",
+     "vi": "Tôi muốn đi Trung Quốc."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-ren",
+   "hanzi": "人",
+   "pinyin": "rén",
+   "vi": "người",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 19,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "你是哪国人？",
+     "py": "Nǐ shì nǎ guó rén?",
+     "vi": "Bạn là người nước nào?"
+    }
+   ],
+   "confusable": [
+    "入"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-laoshi",
+   "hanzi": "老师",
+   "pinyin": "lǎoshī",
+   "vi": "giáo viên, thầy/cô",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 20,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "她是汉语老师。",
+     "py": "Tā shì Hànyǔ lǎoshī.",
+     "vi": "Cô ấy là giáo viên tiếng Trung."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xuesheng",
+   "hanzi": "学生",
+   "pinyin": "xuésheng",
+   "vi": "học sinh, sinh viên",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 21,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "我们都是学生。",
+     "py": "Wǒmen dōu shì xuésheng.",
+     "vi": "Chúng tôi đều là học sinh."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-tongxue",
+   "hanzi": "同学",
+   "pinyin": "tóngxué",
+   "vi": "bạn học",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 22,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "他是我的同学。",
+     "py": "Tā shì wǒ de tóngxué.",
+     "vi": "Anh ấy là bạn học của tôi."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-pengyou",
+   "hanzi": "朋友",
+   "pinyin": "péngyou",
+   "vi": "bạn bè",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 23,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "她是我的好朋友。",
+     "py": "Tā shì wǒ de hǎo péngyou.",
+     "vi": "Cô ấy là bạn thân của tôi."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-renshi",
+   "hanzi": "认识",
+   "pinyin": "rènshi",
+   "vi": "quen, quen biết (người)",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 24,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "认识你很高兴。",
+     "py": "Rènshi nǐ hěn gāoxìng.",
+     "vi": "Rất vui được làm quen với bạn."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-gaoxing",
+   "hanzi": "高兴",
+   "pinyin": "gāoxìng",
+   "vi": "vui, vui mừng",
+   "pos": "tính từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 25,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "今天我很高兴。",
+     "py": "Jīntiān wǒ hěn gāoxìng.",
+     "vi": "Hôm nay tôi rất vui."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-hanyu",
+   "hanzi": "汉语",
+   "pinyin": "Hànyǔ",
+   "vi": "tiếng Hán, tiếng Trung",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 26,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "我学习汉语。",
+     "py": "Wǒ xuéxí Hànyǔ.",
+     "vi": "Tôi học tiếng Trung."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-ma",
+   "hanzi": "吗",
+   "pinyin": "ma",
+   "vi": "(trợ từ nghi vấn cuối câu)",
+   "pos": "trợ từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 27,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "你是老师吗？",
+     "py": "Nǐ shì lǎoshī ma?",
+     "vi": "Bạn là giáo viên à?"
+    }
+   ],
+   "confusable": [
+    "妈"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shei",
+   "hanzi": "谁",
+   "pinyin": "shéi",
+   "vi": "ai",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 28,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "他是谁？",
+     "py": "Tā shì shéi?",
+     "vi": "Anh ấy là ai?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-de",
+   "hanzi": "的",
+   "pinyin": "de",
+   "vi": "của (trợ từ sở hữu)",
+   "pos": "trợ từ",
+   "level": 1,
+   "lesson": "Bài 2 · Giới thiệu bản thân",
+   "lessonNo": 2,
+   "order": 29,
+   "topic": "Bản thân",
+   "ex": [
+    {
+     "zh": "这是我的书。",
+     "py": "Zhè shì wǒ de shū.",
+     "vi": "Đây là sách của tôi."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-yi",
+   "hanzi": "一",
+   "pinyin": "yī",
+   "vi": "một",
+   "pos": "số từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 30,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "我有一个朋友。",
+     "py": "Wǒ yǒu yí gè péngyou.",
+     "vi": "Tôi có một người bạn."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-er",
+   "hanzi": "二",
+   "pinyin": "èr",
+   "vi": "hai",
+   "pos": "số từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 31,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "今天是二月一号。",
+     "py": "Jīntiān shì èryuè yī hào.",
+     "vi": "Hôm nay là ngày 1 tháng 2."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-san",
+   "hanzi": "三",
+   "pinyin": "sān",
+   "vi": "ba",
+   "pos": "số từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 32,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "我家有三口人。",
+     "py": "Wǒ jiā yǒu sān kǒu rén.",
+     "vi": "Nhà tôi có ba người."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shi_10",
+   "hanzi": "十",
+   "pinyin": "shí",
+   "vi": "mười",
+   "pos": "số từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 33,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "我女儿十岁。",
+     "py": "Wǒ nǚ'ér shí suì.",
+     "vi": "Con gái tôi mười tuổi."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-ji",
+   "hanzi": "几",
+   "pinyin": "jǐ",
+   "vi": "mấy (hỏi số lượng nhỏ)",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 34,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "你家有几口人？",
+     "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+     "vi": "Nhà bạn có mấy người?"
+    }
+   ],
+   "confusable": [
+    "多少"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-sui",
+   "hanzi": "岁",
+   "pinyin": "suì",
+   "vi": "tuổi",
+   "pos": "lượng từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 35,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "你几岁了？",
+     "py": "Nǐ jǐ suì le?",
+     "vi": "Con mấy tuổi rồi?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-jintian",
+   "hanzi": "今天",
+   "pinyin": "jīntiān",
+   "vi": "hôm nay",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 36,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "今天星期几？",
+     "py": "Jīntiān xīngqī jǐ?",
+     "vi": "Hôm nay thứ mấy?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-mingtian",
+   "hanzi": "明天",
+   "pinyin": "míngtiān",
+   "vi": "ngày mai",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 37,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "明天我去学校。",
+     "py": "Míngtiān wǒ qù xuéxiào.",
+     "vi": "Ngày mai tôi đến trường."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-zuotian",
+   "hanzi": "昨天",
+   "pinyin": "zuótiān",
+   "vi": "hôm qua",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 38,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "昨天是星期一。",
+     "py": "Zuótiān shì xīngqīyī.",
+     "vi": "Hôm qua là thứ Hai."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-yue",
+   "hanzi": "月",
+   "pinyin": "yuè",
+   "vi": "tháng; mặt trăng",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 39,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "现在是十月。",
+     "py": "Xiànzài shì shíyuè.",
+     "vi": "Bây giờ là tháng Mười."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-hao_day",
+   "hanzi": "号",
+   "pinyin": "hào",
+   "vi": "ngày (trong tháng); số",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 40,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "今天几号？",
+     "py": "Jīntiān jǐ hào?",
+     "vi": "Hôm nay ngày mấy?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xingqi",
+   "hanzi": "星期",
+   "pinyin": "xīngqī",
+   "vi": "tuần; thứ (trong tuần)",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 41,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "星期六我不去学校。",
+     "py": "Xīngqīliù wǒ bú qù xuéxiào.",
+     "vi": "Thứ Bảy tôi không đến trường."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xianzai",
+   "hanzi": "现在",
+   "pinyin": "xiànzài",
+   "vi": "bây giờ",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 42,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "现在几点？",
+     "py": "Xiànzài jǐ diǎn?",
+     "vi": "Bây giờ là mấy giờ?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-dian",
+   "hanzi": "点",
+   "pinyin": "diǎn",
+   "vi": "giờ (giờ đồng hồ)",
+   "pos": "lượng từ",
+   "level": 1,
+   "lesson": "Bài 3 · Số đếm và thời gian",
+   "lessonNo": 3,
+   "order": 43,
+   "topic": "Thời gian",
+   "ex": [
+    {
+     "zh": "现在三点。",
+     "py": "Xiànzài sān diǎn.",
+     "vi": "Bây giờ là ba giờ."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-jia",
+   "hanzi": "家",
+   "pinyin": "jiā",
+   "vi": "nhà, gia đình",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 44,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我家在北京。",
+     "py": "Wǒ jiā zài Běijīng.",
+     "vi": "Nhà tôi ở Bắc Kinh."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-baba",
+   "hanzi": "爸爸",
+   "pinyin": "bàba",
+   "vi": "bố",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 45,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我爸爸是医生。",
+     "py": "Wǒ bàba shì yīshēng.",
+     "vi": "Bố tôi là bác sĩ."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-mama",
+   "hanzi": "妈妈",
+   "pinyin": "māma",
+   "vi": "mẹ",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 46,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "妈妈在家。",
+     "py": "Māma zài jiā.",
+     "vi": "Mẹ ở nhà."
+    }
+   ],
+   "confusable": [
+    "吗"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-erzi",
+   "hanzi": "儿子",
+   "pinyin": "érzi",
+   "vi": "con trai",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 47,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "他儿子三岁。",
+     "py": "Tā érzi sān suì.",
+     "vi": "Con trai anh ấy ba tuổi."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-nver",
+   "hanzi": "女儿",
+   "pinyin": "nǚ'ér",
+   "vi": "con gái",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 48,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我有一个女儿。",
+     "py": "Wǒ yǒu yí gè nǚ'ér.",
+     "vi": "Tôi có một con gái."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-you",
+   "hanzi": "有",
+   "pinyin": "yǒu",
+   "vi": "có",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 49,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我有汉语书。",
+     "py": "Wǒ yǒu Hànyǔ shū.",
+     "vi": "Tôi có sách tiếng Trung."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-meiyou",
+   "hanzi": "没有",
+   "pinyin": "méiyǒu",
+   "vi": "không có; chưa",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 50,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我没有猫。",
+     "py": "Wǒ méiyǒu māo.",
+     "vi": "Tôi không có mèo."
+    }
+   ],
+   "confusable": [
+    "不"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-ge",
+   "hanzi": "个",
+   "pinyin": "gè",
+   "vi": "cái, chiếc, người (lượng từ chung)",
+   "pos": "lượng từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 51,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我们学校有十个老师。",
+     "py": "Wǒmen xuéxiào yǒu shí gè lǎoshī.",
+     "vi": "Trường chúng tôi có mười giáo viên."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-kou",
+   "hanzi": "口",
+   "pinyin": "kǒu",
+   "vi": "(lượng từ đếm người trong nhà); miệng",
+   "pos": "lượng từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 52,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我家有三口人。",
+     "py": "Wǒ jiā yǒu sān kǒu rén.",
+     "vi": "Nhà tôi có ba người."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-gou",
+   "hanzi": "狗",
+   "pinyin": "gǒu",
+   "vi": "con chó",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 53,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "那是我的狗。",
+     "py": "Nà shì wǒ de gǒu.",
+     "vi": "Đó là con chó của tôi."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-mao",
+   "hanzi": "猫",
+   "pinyin": "māo",
+   "vi": "con mèo",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 54,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "我喜欢猫。",
+     "py": "Wǒ xǐhuan māo.",
+     "vi": "Tôi thích mèo."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shu",
+   "hanzi": "书",
+   "pinyin": "shū",
+   "vi": "sách",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 4 · Gia đình",
+   "lessonNo": 4,
+   "order": 55,
+   "topic": "Gia đình",
+   "ex": [
+    {
+     "zh": "这本书很好。",
+     "py": "Zhè běn shū hěn hǎo.",
+     "vi": "Cuốn sách này rất hay."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-chi",
+   "hanzi": "吃",
+   "pinyin": "chī",
+   "vi": "ăn",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 56,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "你想吃什么？",
+     "py": "Nǐ xiǎng chī shénme?",
+     "vi": "Bạn muốn ăn gì?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-he",
+   "hanzi": "喝",
+   "pinyin": "hē",
+   "vi": "uống",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 57,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "我想喝茶。",
+     "py": "Wǒ xiǎng hē chá.",
+     "vi": "Tôi muốn uống trà."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shui",
+   "hanzi": "水",
+   "pinyin": "shuǐ",
+   "vi": "nước",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 58,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "我想喝水。",
+     "py": "Wǒ xiǎng hē shuǐ.",
+     "vi": "Tôi muốn uống nước."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-cha",
+   "hanzi": "茶",
+   "pinyin": "chá",
+   "vi": "trà",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 59,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "中国茶很好喝。",
+     "py": "Zhōngguó chá hěn hǎohē.",
+     "vi": "Trà Trung Quốc rất ngon."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-mifan",
+   "hanzi": "米饭",
+   "pinyin": "mǐfàn",
+   "vi": "cơm",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 60,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "我喜欢吃米饭。",
+     "py": "Wǒ xǐhuan chī mǐfàn.",
+     "vi": "Tôi thích ăn cơm."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-cai",
+   "hanzi": "菜",
+   "pinyin": "cài",
+   "vi": "món ăn; rau",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 61,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "这个菜很好吃。",
+     "py": "Zhège cài hěn hǎochī.",
+     "vi": "Món này rất ngon."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xiang",
+   "hanzi": "想",
+   "pinyin": "xiǎng",
+   "vi": "muốn; nhớ; nghĩ",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 62,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "我想去商店。",
+     "py": "Wǒ xiǎng qù shāngdiàn.",
+     "vi": "Tôi muốn đi cửa hàng."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-mai",
+   "hanzi": "买",
+   "pinyin": "mǎi",
+   "vi": "mua",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 63,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "我想买一本书。",
+     "py": "Wǒ xiǎng mǎi yì běn shū.",
+     "vi": "Tôi muốn mua một cuốn sách."
+    }
+   ],
+   "confusable": [
+    "卖"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-duoshao",
+   "hanzi": "多少",
+   "pinyin": "duōshao",
+   "vi": "bao nhiêu",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 64,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "这个多少钱？",
+     "py": "Zhège duōshao qián?",
+     "vi": "Cái này bao nhiêu tiền?"
+    }
+   ],
+   "confusable": [
+    "几"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-qian",
+   "hanzi": "钱",
+   "pinyin": "qián",
+   "vi": "tiền",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 65,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "这本书多少钱？",
+     "py": "Zhè běn shū duōshao qián?",
+     "vi": "Cuốn sách này bao nhiêu tiền?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-kuai",
+   "hanzi": "块",
+   "pinyin": "kuài",
+   "vi": "đồng (đơn vị tiền, khẩu ngữ); miếng",
+   "pos": "lượng từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 66,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "十块钱。",
+     "py": "Shí kuài qián.",
+     "vi": "Mười đồng."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xihuan",
+   "hanzi": "喜欢",
+   "pinyin": "xǐhuan",
+   "vi": "thích",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 5 · Ăn uống, mua sắm",
+   "lessonNo": 5,
+   "order": 67,
+   "topic": "Mua sắm",
+   "ex": [
+    {
+     "zh": "你喜欢喝茶吗？",
+     "py": "Nǐ xǐhuan hē chá ma?",
+     "vi": "Bạn có thích uống trà không?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-zai",
+   "hanzi": "在",
+   "pinyin": "zài",
+   "vi": "ở, tại; đang",
+   "pos": "động từ/giới từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 68,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "我在学校。",
+     "py": "Wǒ zài xuéxiào.",
+     "vi": "Tôi ở trường."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-nar",
+   "hanzi": "哪儿",
+   "pinyin": "nǎr",
+   "vi": "ở đâu, chỗ nào",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 69,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "你家在哪儿？",
+     "py": "Nǐ jiā zài nǎr?",
+     "vi": "Nhà bạn ở đâu?"
+    }
+   ],
+   "confusable": [
+    "那儿"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-zhe",
+   "hanzi": "这",
+   "pinyin": "zhè",
+   "vi": "đây, này",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 70,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "这是什么？",
+     "py": "Zhè shì shénme?",
+     "vi": "Đây là cái gì?"
+    }
+   ],
+   "confusable": [
+    "那"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-na",
+   "hanzi": "那",
+   "pinyin": "nà",
+   "vi": "kia, đó",
+   "pos": "đại từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 71,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "那是谁的书？",
+     "py": "Nà shì shéi de shū?",
+     "vi": "Kia là sách của ai?"
+    }
+   ],
+   "confusable": [
+    "这"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-xuexiao",
+   "hanzi": "学校",
+   "pinyin": "xuéxiào",
+   "vi": "trường học",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 72,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "学校在哪儿？",
+     "py": "Xuéxiào zài nǎr?",
+     "vi": "Trường học ở đâu?"
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-yiyuan",
+   "hanzi": "医院",
+   "pinyin": "yīyuàn",
+   "vi": "bệnh viện",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 73,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "爸爸在医院工作。",
+     "py": "Bàba zài yīyuàn gōngzuò.",
+     "vi": "Bố làm việc ở bệnh viện."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-shangdian",
+   "hanzi": "商店",
+   "pinyin": "shāngdiàn",
+   "vi": "cửa hàng",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 74,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "商店在学校前面。",
+     "py": "Shāngdiàn zài xuéxiào qiánmiàn.",
+     "vi": "Cửa hàng ở phía trước trường."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-qu",
+   "hanzi": "去",
+   "pinyin": "qù",
+   "vi": "đi (đến nơi nào đó)",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 75,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "你去哪儿？",
+     "py": "Nǐ qù nǎr?",
+     "vi": "Bạn đi đâu?"
+    }
+   ],
+   "confusable": [
+    "来"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-lai",
+   "hanzi": "来",
+   "pinyin": "lái",
+   "vi": "đến, tới",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 76,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "他明天来我家。",
+     "py": "Tā míngtiān lái wǒ jiā.",
+     "vi": "Ngày mai anh ấy đến nhà tôi."
+    }
+   ],
+   "confusable": [
+    "去"
+   ],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-hui",
+   "hanzi": "回",
+   "pinyin": "huí",
+   "vi": "về, trở về",
+   "pos": "động từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 77,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "我想回家。",
+     "py": "Wǒ xiǎng huí jiā.",
+     "vi": "Tôi muốn về nhà."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-feiji",
+   "hanzi": "飞机",
+   "pinyin": "fēijī",
+   "vi": "máy bay",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 78,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "我坐飞机去北京。",
+     "py": "Wǒ zuò fēijī qù Běijīng.",
+     "vi": "Tôi đi máy bay đến Bắc Kinh."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-chuzuche",
+   "hanzi": "出租车",
+   "pinyin": "chūzūchē",
+   "vi": "xe taxi",
+   "pos": "danh từ",
+   "level": 1,
+   "lesson": "Bài 6 · Nơi chốn, đi lại",
+   "lessonNo": 6,
+   "order": 79,
+   "topic": "Nơi chốn",
+   "ex": [
+    {
+     "zh": "我们坐出租车去医院。",
+     "py": "Wǒmen zuò chūzūchē qù yīyuàn.",
+     "vi": "Chúng tôi đi taxi đến bệnh viện."
+    }
+   ],
+   "confusable": [],
+   "audio": null,
+   "packId": "hsk1-core"
+  }
+ ],
+ "grammar": [
+  {
+   "id": "h1-g-shi",
+   "level": 1,
+   "title": "Câu chữ 是 (A là B)",
+   "pattern": "A 是 B ／ A 不是 B",
+   "explain": "是 nối hai danh từ/đại từ, nghĩa là “là”. Phủ định thêm 不 trước 是 (đọc bú shì). Lưu ý: không dùng 是 trước tính từ — nói 我很好, không nói 我是好.",
+   "examples": [
+    {
+     "zh": "我是学生。",
+     "py": "Wǒ shì xuésheng.",
+     "vi": "Tôi là học sinh."
+    },
+    {
+     "zh": "他不是老师。",
+     "py": "Tā bú shì lǎoshī.",
+     "vi": "Anh ấy không phải giáo viên."
+    }
+   ],
+   "compare": "Người Việt hay nói “tôi là khỏe” theo thói quen → sai. Tính từ đứng sau 很: 我很好.",
+   "questions": [
+    "h1-q-shi-1",
+    "h1-q-shi-2",
+    "h1-q-shi-3"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-ma",
+   "level": 1,
+   "title": "Câu hỏi với 吗",
+   "pattern": "Câu trần thuật + 吗？",
+   "explain": "Thêm 吗 vào cuối câu trần thuật để tạo câu hỏi có/không. Trả lời bằng cách lặp lại động từ: 是／不是, 有／没有, 喜欢／不喜欢.",
+   "examples": [
+    {
+     "zh": "你是老师吗？",
+     "py": "Nǐ shì lǎoshī ma?",
+     "vi": "Bạn là giáo viên à?"
+    },
+    {
+     "zh": "你喜欢喝茶吗？",
+     "py": "Nǐ xǐhuan hē chá ma?",
+     "vi": "Bạn có thích uống trà không?"
+    }
+   ],
+   "compare": "Câu đã có từ để hỏi (什么, 谁, 哪儿, 几, 多少) thì KHÔNG thêm 吗.",
+   "questions": [
+    "h1-q-ma-1",
+    "h1-q-ma-2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-yiwen",
+   "level": 1,
+   "title": "Đại từ nghi vấn: 什么, 谁, 哪儿, 几, 多少",
+   "pattern": "Giữ nguyên trật tự câu, thay phần cần hỏi bằng từ để hỏi",
+   "explain": "Khác tiếng Anh, tiếng Trung không đảo từ để hỏi lên đầu câu. Muốn hỏi phần nào thì thay phần đó bằng từ để hỏi: 他是老师 → 他是谁？ 你去学校 → 你去哪儿？",
+   "examples": [
+    {
+     "zh": "你叫什么名字？",
+     "py": "Nǐ jiào shénme míngzi?",
+     "vi": "Bạn tên là gì?"
+    },
+    {
+     "zh": "你家有几口人？",
+     "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+     "vi": "Nhà bạn có mấy người?"
+    },
+    {
+     "zh": "这本书多少钱？",
+     "py": "Zhè běn shū duōshao qián?",
+     "vi": "Cuốn sách này bao nhiêu tiền?"
+    }
+   ],
+   "compare": "几 dùng khi đoán số nhỏ (thường dưới 10) và phải có lượng từ: 几口人. 多少 dùng cho số lớn hoặc không đoán được, lượng từ có thể lược: 多少钱, 多少学生.",
+   "questions": [
+    "h1-q-yw-1",
+    "h1-q-yw-2",
+    "h1-q-yw-3",
+    "h1-q-yw-4"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-de",
+   "level": 1,
+   "title": "Trợ từ sở hữu 的",
+   "pattern": "Người sở hữu + 的 + vật/người",
+   "explain": "的 tương đương “của” nhưng đứng TRƯỚC danh từ, trật tự ngược tiếng Việt: 我的书 = sách của tôi. Với người thân, đơn vị gần gũi có thể bỏ 的: 我妈妈, 我家, 我们学校.",
+   "examples": [
+    {
+     "zh": "这是我的书。",
+     "py": "Zhè shì wǒ de shū.",
+     "vi": "Đây là sách của tôi."
+    },
+    {
+     "zh": "她是我的同学。",
+     "py": "Tā shì wǒ de tóngxué.",
+     "vi": "Cô ấy là bạn học của tôi."
+    }
+   ],
+   "compare": "Tiếng Việt: sách CỦA tôi (vật trước). Tiếng Trung: 我的书 (người sở hữu trước).",
+   "questions": [
+    "h1-q-de-1",
+    "h1-q-de-2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-you",
+   "level": 1,
+   "title": "Câu chữ 有 / 没有",
+   "pattern": "Chủ ngữ + 有 + tân ngữ ／ 没有",
+   "explain": "有 = có. Phủ định của 有 luôn là 没有 (hoặc 没), KHÔNG dùng 不有.",
+   "examples": [
+    {
+     "zh": "我有一个女儿。",
+     "py": "Wǒ yǒu yí gè nǚ'ér.",
+     "vi": "Tôi có một con gái."
+    },
+    {
+     "zh": "我没有猫。",
+     "py": "Wǒ méiyǒu māo.",
+     "vi": "Tôi không có mèo."
+    }
+   ],
+   "compare": "不有 là lỗi rất hay gặp của người mới học.",
+   "questions": [
+    "h1-q-you-1",
+    "h1-q-you-2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-zai",
+   "level": 1,
+   "title": "在 + nơi chốn",
+   "pattern": "Chủ ngữ + 在 + nơi chốn ／ 在 + nơi chốn + động từ",
+   "explain": "在 chỉ vị trí: 妈妈在家 (mẹ ở nhà). Khi có hành động, cụm 在 + nơi chốn đứng TRƯỚC động từ: 爸爸在医院工作 (bố làm việc ở bệnh viện) — ngược với tiếng Việt.",
+   "examples": [
+    {
+     "zh": "我在学校。",
+     "py": "Wǒ zài xuéxiào.",
+     "vi": "Tôi ở trường."
+    },
+    {
+     "zh": "爸爸在医院工作。",
+     "py": "Bàba zài yīyuàn gōngzuò.",
+     "vi": "Bố làm việc ở bệnh viện."
+    }
+   ],
+   "compare": "Tiếng Việt: làm việc Ở bệnh viện. Tiếng Trung: 在医院工作 (nơi chốn trước động từ).",
+   "questions": [
+    "h1-q-zai-1",
+    "h1-q-zai-2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-liang",
+   "level": 1,
+   "title": "Số + lượng từ + danh từ",
+   "pattern": "Số + 个/口/本… + danh từ",
+   "explain": "Giữa số và danh từ phải có lượng từ: 一个人, 三口人 (người trong nhà), 一本书. 个 là lượng từ chung dùng nhiều nhất.",
+   "examples": [
+    {
+     "zh": "我有一个朋友。",
+     "py": "Wǒ yǒu yí gè péngyou.",
+     "vi": "Tôi có một người bạn."
+    },
+    {
+     "zh": "我家有三口人。",
+     "py": "Wǒ jiā yǒu sān kǒu rén.",
+     "vi": "Nhà tôi có ba người."
+    }
+   ],
+   "compare": "Trước lượng từ, “hai” dùng 两 chứ không dùng 二 (两 thuộc từ vựng HSK 2): 两个人.",
+   "questions": [
+    "h1-q-lt-1",
+    "h1-q-lt-2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-g-bumei",
+   "level": 1,
+   "title": "Phủ định: 不 và 没(有)",
+   "pattern": "不 + động từ/tính từ ／ 没(有) + động từ",
+   "explain": "不: phủ định ý muốn, thói quen, hiện tại, tương lai, và phủ định 是. 没(有): phủ định 有 và phủ định việc đã xảy ra.",
+   "examples": [
+    {
+     "zh": "我不是老师。",
+     "py": "Wǒ bú shì lǎoshī.",
+     "vi": "Tôi không phải giáo viên."
+    },
+    {
+     "zh": "明天我不去学校。",
+     "py": "Míngtiān wǒ bú qù xuéxiào.",
+     "vi": "Ngày mai tôi không đến trường."
+    },
+    {
+     "zh": "我没有钱。",
+     "py": "Wǒ méiyǒu qián.",
+     "vi": "Tôi không có tiền."
+    }
+   ],
+   "compare": "不是 ✓ / 没是 ✗；没有 ✓ / 不有 ✗.",
+   "questions": [
+    "h1-q-bm-1",
+    "h1-q-bm-2",
+    "h1-q-bm-3"
+   ],
+   "packId": "hsk1-core"
+  }
+ ],
+ "readings": [
+  {
+   "id": "h1-r-1",
+   "level": 1,
+   "title": "Bạn học mới",
+   "topic": "Bản thân",
+   "text": "你好！我叫李月。我是中国人，我是学生。这是我的同学，她叫阮兰。她不是中国人，她是越南人。认识她，我很高兴。",
+   "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Yuè. Wǒ shì Zhōngguó rén, wǒ shì xuésheng. Zhè shì wǒ de tóngxué, tā jiào Ruǎn Lán. Tā bú shì Zhōngguó rén, tā shì Yuènán rén. Rènshi tā, wǒ hěn gāoxìng.",
+   "vi": "Xin chào! Tôi tên là Lý Nguyệt. Tôi là người Trung Quốc, tôi là học sinh. Đây là bạn học của tôi, cô ấy tên là Nguyễn Lan. Cô ấy không phải người Trung Quốc, cô ấy là người Việt Nam. Quen cô ấy, tôi rất vui.",
+   "questions": [
+    "h1-q-r1-1",
+    "h1-q-r1-2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-r-2",
+   "level": 1,
+   "title": "Gia đình tôi",
+   "topic": "Gia đình",
+   "text": "我家有三口人：爸爸、妈妈和我。爸爸是医生，他在医院工作。妈妈是汉语老师，她在学校工作。我是学生。我很喜欢我的家。",
+   "pinyin": "Wǒ jiā yǒu sān kǒu rén: bàba, māma hé wǒ. Bàba shì yīshēng, tā zài yīyuàn gōngzuò. Māma shì Hànyǔ lǎoshī, tā zài xuéxiào gōngzuò. Wǒ shì xuésheng. Wǒ hěn xǐhuan wǒ de jiā.",
+   "vi": "Nhà tôi có ba người: bố, mẹ và tôi. Bố là bác sĩ, bố làm việc ở bệnh viện. Mẹ là giáo viên tiếng Trung, mẹ làm việc ở trường. Tôi là học sinh. Tôi rất yêu gia đình mình.",
+   "questions": [
+    "h1-q-r2-1",
+    "h1-q-r2-2",
+    "h1-q-r2-3"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-r-3",
+   "level": 1,
+   "title": "Đi mua sắm",
+   "topic": "Mua sắm",
+   "text": "今天是星期六。我和朋友去商店买东西。我想买一本汉语书，朋友想买茶。这本书三十块钱，茶二十块钱。买了东西，我们坐出租车回家。",
+   "pinyin": "Jīntiān shì xīngqīliù. Wǒ hé péngyou qù shāngdiàn mǎi dōngxi. Wǒ xiǎng mǎi yì běn Hànyǔ shū, péngyou xiǎng mǎi chá. Zhè běn shū sānshí kuài qián, chá èrshí kuài qián. Mǎi le dōngxi, wǒmen zuò chūzūchē huí jiā.",
+   "vi": "Hôm nay là thứ Bảy. Tôi và bạn đi cửa hàng mua đồ. Tôi muốn mua một cuốn sách tiếng Trung, bạn tôi muốn mua trà. Cuốn sách này 30 đồng, trà 20 đồng. Mua đồ xong, chúng tôi đi taxi về nhà.",
+   "questions": [
+    "h1-q-r3-1",
+    "h1-q-r3-2",
+    "h1-q-r3-3"
+   ],
+   "packId": "hsk1-core"
+  }
+ ],
+ "listening": [
+  {
+   "id": "h1-l-1",
+   "level": 1,
+   "title": "Hỏi tên",
+   "lines": [
+    {
+     "who": "女",
+     "zh": "你好，你叫什么名字？",
+     "py": "Nǐ hǎo, nǐ jiào shénme míngzi?"
+    },
+    {
+     "who": "男",
+     "zh": "我叫王明。",
+     "py": "Wǒ jiào Wáng Míng."
+    }
+   ],
+   "transcript": "女：你好，你叫什么名字？ 男：我叫王明。",
+   "vi": "Nữ: Chào bạn, bạn tên là gì? — Nam: Tôi tên là Vương Minh.",
+   "audio": null,
+   "tts": true,
+   "questions": [
+    "h1-q-l1"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-l-2",
+   "level": 1,
+   "title": "Gia đình mấy người",
+   "lines": [
+    {
+     "who": "男",
+     "zh": "你家有几口人？",
+     "py": "Nǐ jiā yǒu jǐ kǒu rén?"
+    },
+    {
+     "who": "女",
+     "zh": "我家有三口人。",
+     "py": "Wǒ jiā yǒu sān kǒu rén."
+    }
+   ],
+   "transcript": "男：你家有几口人？ 女：我家有三口人。",
+   "vi": "Nam: Nhà bạn có mấy người? — Nữ: Nhà tôi có ba người.",
+   "audio": null,
+   "tts": true,
+   "questions": [
+    "h1-q-l2"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-l-3",
+   "level": 1,
+   "title": "Hỏi giá",
+   "lines": [
+    {
+     "who": "女",
+     "zh": "这本书多少钱？",
+     "py": "Zhè běn shū duōshao qián?"
+    },
+    {
+     "who": "男",
+     "zh": "三十块。",
+     "py": "Sānshí kuài."
+    }
+   ],
+   "transcript": "女：这本书多少钱？ 男：三十块。",
+   "vi": "Nữ: Cuốn sách này bao nhiêu tiền? — Nam: Ba mươi đồng.",
+   "audio": null,
+   "tts": true,
+   "questions": [
+    "h1-q-l3"
+   ],
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-l-4",
+   "level": 1,
+   "title": "Ngày mai đi đâu",
+   "lines": [
+    {
+     "who": "男",
+     "zh": "你明天去哪儿？",
+     "py": "Nǐ míngtiān qù nǎr?"
+    },
+    {
+     "who": "女",
+     "zh": "我去医院看我妈妈。",
+     "py": "Wǒ qù yīyuàn kàn wǒ māma."
+    }
+   ],
+   "transcript": "男：你明天去哪儿？ 女：我去医院看我妈妈。",
+   "vi": "Nam: Ngày mai bạn đi đâu? — Nữ: Tôi đi bệnh viện thăm mẹ.",
+   "audio": null,
+   "tts": true,
+   "questions": [
+    "h1-q-l4"
+   ],
+   "packId": "hsk1-core"
+  }
+ ],
+ "questions": [
+  {
+   "id": "h1-q-shi-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Chọn câu đúng:",
+   "options": [
+    "我是很好。",
+    "我很好。",
+    "我好是。"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "Trước tính từ dùng 很, không dùng 是.",
+   "tags": {
+    "grammar": "h1-g-shi"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-shi-2",
+   "skill": "grammar",
+   "type": "fill",
+   "input": "hanzi",
+   "prompt": "Điền vào chỗ trống (Anh ấy không phải giáo viên, anh ấy là học sinh):<br><span class='zh'>他＿＿老师，他是学生。</span>",
+   "answer": "不是",
+   "explain": "Phủ định của 是 là 不是.",
+   "tags": {
+    "grammar": "h1-g-shi"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-shi-3",
+   "skill": "writing",
+   "type": "order",
+   "prompt": "Sắp xếp thành câu: “Tôi là học sinh.”",
+   "tokens": [
+    "是",
+    "我",
+    "学生"
+   ],
+   "answer": "我是学生",
+   "explain": "Chủ ngữ + 是 + danh từ.",
+   "tags": {
+    "grammar": "h1-g-shi"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-ma-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Đặt 吗 đúng chỗ cho câu “你是中国人”:",
+   "options": [
+    "吗你是中国人？",
+    "你是中国人吗？",
+    "你吗是中国人？"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "吗 luôn đứng cuối câu.",
+   "tags": {
+    "grammar": "h1-g-ma"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-ma-2",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Câu nào SAI?",
+   "options": [
+    "你喜欢猫吗？",
+    "你叫什么名字吗？",
+    "他是老师吗？"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "difficulty": 2,
+   "explain": "Đã có 什么 thì không thêm 吗: 你叫什么名字？",
+   "tags": {
+    "grammar": "h1-g-ma"
+   },
+   "level": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-yw-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>你家有＿＿口人？</span>",
+   "options": [
+    "几",
+    "多少",
+    "什么"
+   ],
+   "answer": 0,
+   "zhOptions": true,
+   "explain": "Số người trong nhà là số nhỏ, có lượng từ 口 → dùng 几.",
+   "tags": {
+    "grammar": "h1-g-yiwen"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-yw-2",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>这本书＿＿钱？</span>",
+   "options": [
+    "几",
+    "多少",
+    "谁"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "Hỏi giá tiền dùng 多少钱.",
+   "tags": {
+    "grammar": "h1-g-yiwen"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-yw-3",
+   "skill": "writing",
+   "type": "order",
+   "prompt": "Sắp xếp thành câu: “Bạn đi đâu?”",
+   "tokens": [
+    "哪儿",
+    "你",
+    "去"
+   ],
+   "answer": "你去哪儿",
+   "explain": "Không đảo từ để hỏi: 你去哪儿？",
+   "tags": {
+    "grammar": "h1-g-yiwen"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-yw-4",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Hỏi “Anh ấy là ai?”:",
+   "options": [
+    "谁是他吗？",
+    "他是谁？",
+    "他谁是？"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "difficulty": 2,
+   "explain": "Thay 老师 trong 他是老师 bằng 谁, không thêm 吗.",
+   "tags": {
+    "grammar": "h1-g-yiwen"
+   },
+   "level": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-de-1",
+   "skill": "grammar",
+   "type": "fill",
+   "input": "hanzi",
+   "prompt": "Điền vào chỗ trống (Đây là sách của tôi):<br><span class='zh'>这是＿＿书。</span>",
+   "answer": "我的",
+   "explain": "我 + 的 + 书.",
+   "tags": {
+    "grammar": "h1-g-de"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-de-2",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Cách nói tự nhiên của “mẹ tôi”:",
+   "options": [
+    "我妈妈",
+    "妈妈我",
+    "妈妈的我"
+   ],
+   "answer": 0,
+   "zhOptions": true,
+   "explain": "Quan hệ gia đình có thể bỏ 的: 我妈妈.",
+   "tags": {
+    "grammar": "h1-g-de"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-you-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "Câu nào đúng?",
+   "options": [
+    "我不有狗。",
+    "我没有狗。",
+    "我没狗有。"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "Phủ định của 有 là 没有.",
+   "tags": {
+    "grammar": "h1-g-you"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-you-2",
+   "skill": "writing",
+   "type": "order",
+   "prompt": "Sắp xếp thành câu: “Tôi có một con gái.”",
+   "tokens": [
+    "有",
+    "我",
+    "一个",
+    "女儿"
+   ],
+   "answer": "我有一个女儿",
+   "explain": "Chủ ngữ + 有 + số + lượng từ + danh từ.",
+   "tags": {
+    "grammar": "h1-g-you"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-zai-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>妈妈＿＿家。</span> (Mẹ ở nhà)",
+   "options": [
+    "是",
+    "在",
+    "有"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "Chỉ vị trí dùng 在.",
+   "tags": {
+    "grammar": "h1-g-zai"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-zai-2",
+   "skill": "writing",
+   "type": "order",
+   "prompt": "Sắp xếp thành câu: “Bố làm việc ở bệnh viện.”",
+   "tokens": [
+    "在",
+    "医院",
+    "工作",
+    "爸爸"
+   ],
+   "answer": "爸爸在医院工作",
+   "difficulty": 2,
+   "explain": "在 + nơi chốn đứng trước động từ.",
+   "tags": {
+    "grammar": "h1-g-zai"
+   },
+   "level": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-lt-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "“Tôi có một cuốn sách.”",
+   "options": [
+    "我有一书。",
+    "我有一本书。",
+    "我有书一本。"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "Phải có lượng từ 本 giữa số và danh từ.",
+   "tags": {
+    "grammar": "h1-g-liang"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-lt-2",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>我家有四＿＿人。</span>",
+   "options": [
+    "个",
+    "口",
+    "本"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "difficulty": 2,
+   "explain": "Đếm người trong gia đình dùng 口.",
+   "tags": {
+    "grammar": "h1-g-liang"
+   },
+   "level": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-bm-1",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>我＿＿是老师。</span>",
+   "options": [
+    "不",
+    "没"
+   ],
+   "answer": 0,
+   "zhOptions": true,
+   "explain": "Phủ định 是 dùng 不.",
+   "tags": {
+    "grammar": "h1-g-bumei"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-bm-2",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>我＿＿有钱。</span>",
+   "options": [
+    "不",
+    "没"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "Phủ định 有 dùng 没.",
+   "tags": {
+    "grammar": "h1-g-bumei"
+   },
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-bm-3",
+   "skill": "grammar",
+   "type": "choice",
+   "prompt": "<span class='zh'>明天我＿＿去学校。</span>",
+   "options": [
+    "不",
+    "没"
+   ],
+   "answer": 0,
+   "zhOptions": true,
+   "difficulty": 2,
+   "explain": "Việc tương lai/ý định phủ định bằng 不.",
+   "tags": {
+    "grammar": "h1-g-bumei"
+   },
+   "level": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-1",
+   "skill": "writing",
+   "type": "order",
+   "prompt": "Sắp xếp thành câu: “Rất vui được làm quen với bạn.”",
+   "tokens": [
+    "很",
+    "认识",
+    "高兴",
+    "你"
+   ],
+   "answer": "认识你很高兴",
+   "explain": "认识你 + 很高兴.",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-2",
+   "skill": "writing",
+   "type": "fill",
+   "input": "hanzi",
+   "prompt": "Gõ chữ Hán của từ: <b>cảm ơn</b>",
+   "answer": "谢谢",
+   "explain": "谢谢 xièxie.",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-3",
+   "skill": "writing",
+   "type": "fill",
+   "input": "pinyin",
+   "checkTones": true,
+   "prompt": "Gõ pinyin có thanh điệu cho: <span class='zh'>朋友</span><br><small>Có thể gõ dấu (péngyou) hoặc số (peng2you)</small>",
+   "answer": "péngyou",
+   "explain": "朋友 péngyou — 友 đọc thanh nhẹ.",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-4",
+   "skill": "writing",
+   "type": "fill",
+   "input": "pinyin",
+   "checkTones": true,
+   "prompt": "Gõ pinyin có thanh điệu cho: <span class='zh'>学校</span>",
+   "answer": "xuéxiào",
+   "explain": "学校 xuéxiào (thanh 2 + thanh 4).",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-5",
+   "skill": "writing",
+   "type": "fill",
+   "input": "hanzi",
+   "prompt": "Gõ chữ Hán: <b>bệnh viện</b>",
+   "answer": "医院",
+   "explain": "医院 yīyuàn.",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-6",
+   "skill": "writing",
+   "type": "open",
+   "prompt": "Viết một câu giới thiệu tên và quốc tịch của bạn.",
+   "answer": "我叫阮文安，我是越南人。",
+   "criteria": [
+    "Có dùng 叫 hoặc 是 để nói tên",
+    "Có câu …是…人 để nói quốc tịch",
+    "Chữ Hán viết đúng, có dấu câu tiếng Trung"
+   ],
+   "explain": "Đáp án mẫu: 我叫阮文安，我是越南人。(越南 Yuènán = Việt Nam)",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-w-7",
+   "skill": "writing",
+   "type": "open",
+   "prompt": "Dùng từ 喜欢 viết một câu nói về sở thích ăn uống.",
+   "answer": "我喜欢喝茶。",
+   "criteria": [
+    "Có 喜欢 + động từ/danh từ",
+    "Trật tự: Chủ ngữ + 喜欢 + …",
+    "Câu có dấu chấm 。"
+   ],
+   "explain": "Ví dụ: 我喜欢喝茶。我喜欢吃米饭。",
+   "level": 1,
+   "difficulty": 1,
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r1-1",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>李月是＿＿。</span>",
+   "options": [
+    "老师",
+    "学生",
+    "医生"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "我是学生。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-1",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r1-2",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>阮兰是中国人吗？</span>",
+   "options": [
+    "是",
+    "不是"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "她不是中国人，她是越南人。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-1",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r2-1",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>爸爸在哪儿工作？</span>",
+   "options": [
+    "学校",
+    "医院",
+    "商店"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "他在医院工作。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-2",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r2-2",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>妈妈是＿＿。</span>",
+   "options": [
+    "医生",
+    "学生",
+    "汉语老师"
+   ],
+   "answer": 2,
+   "zhOptions": true,
+   "explain": "妈妈是汉语老师。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-2",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r2-3",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>他家有几口人？</span>",
+   "options": [
+    "三口",
+    "四口",
+    "五口"
+   ],
+   "answer": 0,
+   "zhOptions": true,
+   "explain": "我家有三口人。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-2",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r3-1",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>今天星期几？</span>",
+   "options": [
+    "星期一",
+    "星期六",
+    "星期三"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "今天是星期六。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-3",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r3-2",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>书多少钱？</span>",
+   "options": [
+    "二十块",
+    "三十块",
+    "十块"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "这本书三十块钱。",
+   "level": 1,
+   "difficulty": 1,
+   "passage": "h1-r-3",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-r3-3",
+   "skill": "reading",
+   "type": "choice",
+   "prompt": "<span class='zh'>他们怎么回家？</span>",
+   "options": [
+    "坐飞机",
+    "坐出租车",
+    "在学校"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "difficulty": 2,
+   "explain": "我们坐出租车回家。",
+   "level": 1,
+   "passage": "h1-r-3",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-l1",
+   "skill": "listening",
+   "type": "listen-choice",
+   "prompt": "<span class='zh'>男的叫什么名字？</span>",
+   "options": [
+    "李月",
+    "王明",
+    "王月"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "我叫王明。",
+   "level": 1,
+   "difficulty": 1,
+   "listen": "h1-l-1",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-l2",
+   "skill": "listening",
+   "type": "listen-choice",
+   "prompt": "<span class='zh'>女的家有几口人？</span>",
+   "options": [
+    "两口",
+    "三口",
+    "四口"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "explain": "我家有三口人。",
+   "level": 1,
+   "difficulty": 1,
+   "listen": "h1-l-2",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-l3",
+   "skill": "listening",
+   "type": "listen-choice",
+   "prompt": "<span class='zh'>这本书多少钱？</span>",
+   "options": [
+    "十三块",
+    "三十块",
+    "四十块"
+   ],
+   "answer": 1,
+   "zhOptions": true,
+   "difficulty": 2,
+   "explain": "三十块 (sānshí), khác 十三 (shísān).",
+   "level": 1,
+   "listen": "h1-l-3",
+   "packId": "hsk1-core"
+  },
+  {
+   "id": "h1-q-l4",
+   "skill": "listening",
+   "type": "listen-choice",
+   "prompt": "<span class='zh'>女的明天去哪儿？</span>",
+   "options": [
+    "学校",
+    "商店",
+    "医院"
+   ],
+   "answer": 2,
+   "zhOptions": true,
+   "explain": "我去医院看我妈妈。",
+   "level": 1,
+   "difficulty": 1,
+   "listen": "h1-l-4",
+   "packId": "hsk1-core"
+  }
+ ],
+ "audioFiles": []
+}

@@ -1,0 +1,68 @@
+{
+ "note": "Cấu hình phiên bản HSK và bài kiểm tra. Sửa tệp này để thêm/đổi phiên bản mà không phải sửa mã.",
+ "versions": [
+  {
+   "id": "hsk2",
+   "name": "HSK 2.0 (6 cấp)",
+   "status": "Đang được thay thế",
+   "note": "Theo các nguồn đã tra (chưa đối chiếu trực tiếp chinesetest.cn): các kỳ thi thường kỳ năm 2026 trước tháng 12 dùng HSK 2.0.",
+   "official": {
+    "1": {
+     "listening": 20,
+     "reading": 20,
+     "minutes": 40,
+     "verified": false,
+     "note": "20 câu nghe + 20 câu đọc, khoảng 40 phút — theo hiểu biết chung, CHƯA xác minh nguồn chính thức."
+    }
+   }
+  },
+  {
+   "id": "hsk3",
+   "name": "HSK 3.0 (9 cấp)",
+   "status": "Chưa có cấu hình đề",
+   "note": "Kỳ thi chính thức HSK 3.0 cấp 1–6 được công bố từ 13/12/2026; cấp 3–6 có thi nói kèm. Cấu trúc đề chưa nhập vào ứng dụng.",
+   "official": {}
+  }
+ ],
+ "practiceTests": {
+  "1": {
+   "title": "Kiểm tra tổng hợp HSK 1 (tự biên soạn)",
+   "minutes": 20,
+   "sections": [
+    {
+     "id": "listen",
+     "name": "Nghe",
+     "count": 4,
+     "source": "listening"
+    },
+    {
+     "id": "vocab",
+     "name": "Từ vựng",
+     "count": 10,
+     "source": "vocab"
+    },
+    {
+     "id": "grammar",
+     "name": "Ngữ pháp",
+     "count": 6,
+     "source": "q:grammar"
+    },
+    {
+     "id": "read",
+     "name": "Đọc hiểu",
+     "count": 5,
+     "source": "q:reading"
+    }
+   ]
+  }
+ },
+ "fullMock": {
+  "note": "Đề mô phỏng đủ chuẩn chỉ mở khi cấu trúc đề đã xác minh và ngân hàng đủ số câu, loại câu.",
+  "minBank": {
+   "1": {
+    "listening": 20,
+    "reading": 20
+   }
+  }
+ }
+}
