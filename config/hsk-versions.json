@@ -26,14 +26,20 @@
  ],
  "practiceTests": {
   "1": {
-   "title": "Kiểm tra tổng hợp HSK 1 (tự biên soạn)",
-   "minutes": 20,
+   "title": "Thi thử HSK 1 (tự biên soạn)",
+   "minutes": 25,
    "sections": [
     {
      "id": "listen",
-     "name": "Nghe",
-     "count": 4,
+     "name": "Nghe câu",
+     "count": 5,
      "source": "listening"
+    },
+    {
+     "id": "lw",
+     "name": "Nghe từ",
+     "count": 5,
+     "source": "listen-word"
     },
     {
      "id": "vocab",
@@ -42,16 +48,190 @@
      "source": "vocab"
     },
     {
+     "id": "fill",
+     "name": "Điền từ vào câu",
+     "count": 5,
+     "source": "vocab:fill"
+    },
+    {
+     "id": "read",
+     "name": "Đọc hiểu",
+     "count": 8,
+     "source": "q:reading"
+    },
+    {
      "id": "grammar",
      "name": "Ngữ pháp",
      "count": 6,
      "source": "q:grammar"
     },
     {
+     "id": "order",
+     "name": "Sắp xếp câu",
+     "count": 5,
+     "source": "q:writing"
+    }
+   ]
+  },
+  "2": {
+   "title": "Thi thử HSK 2 (tự biên soạn)",
+   "minutes": 30,
+   "sections": [
+    {
+     "id": "listen",
+     "name": "Nghe câu",
+     "count": 8,
+     "source": "listening"
+    },
+    {
+     "id": "lw",
+     "name": "Nghe từ",
+     "count": 5,
+     "source": "listen-word"
+    },
+    {
+     "id": "vocab",
+     "name": "Từ vựng",
+     "count": 10,
+     "source": "vocab"
+    },
+    {
+     "id": "fill",
+     "name": "Điền từ vào câu",
+     "count": 7,
+     "source": "vocab:fill"
+    },
+    {
      "id": "read",
      "name": "Đọc hiểu",
-     "count": 5,
+     "count": 8,
      "source": "q:reading"
+    },
+    {
+     "id": "order",
+     "name": "Sắp xếp câu",
+     "count": 6,
+     "source": "q:writing"
+    }
+   ]
+  },
+  "3": {
+   "title": "Thi thử HSK 3 (tự biên soạn)",
+   "minutes": 35,
+   "sections": [
+    {
+     "id": "listen",
+     "name": "Nghe câu",
+     "count": 10,
+     "source": "listening"
+    },
+    {
+     "id": "vocab",
+     "name": "Từ vựng",
+     "count": 12,
+     "source": "vocab"
+    },
+    {
+     "id": "fill",
+     "name": "Điền từ vào câu",
+     "count": 10,
+     "source": "vocab:fill"
+    },
+    {
+     "id": "order",
+     "name": "Sắp xếp câu",
+     "count": 8,
+     "source": "q:writing"
+    }
+   ]
+  },
+  "4": {
+   "title": "Thi thử HSK 4 (tự biên soạn)",
+   "minutes": 40,
+   "sections": [
+    {
+     "id": "listen",
+     "name": "Nghe câu",
+     "count": 10,
+     "source": "listening"
+    },
+    {
+     "id": "vocab",
+     "name": "Từ vựng",
+     "count": 15,
+     "source": "vocab"
+    },
+    {
+     "id": "fill",
+     "name": "Điền từ vào câu",
+     "count": 12,
+     "source": "vocab:fill"
+    },
+    {
+     "id": "order",
+     "name": "Sắp xếp câu",
+     "count": 8,
+     "source": "q:writing"
+    }
+   ]
+  },
+  "5": {
+   "title": "Thi thử HSK 5 – từ vựng (tự biên soạn)",
+   "minutes": 30,
+   "sections": [
+    {
+     "id": "lw",
+     "name": "Nghe từ",
+     "count": 8,
+     "source": "listen-word"
+    },
+    {
+     "id": "mean",
+     "name": "Chọn nghĩa",
+     "count": 15,
+     "source": "vocab:meaning"
+    },
+    {
+     "id": "hz",
+     "name": "Chọn chữ theo nghĩa",
+     "count": 10,
+     "source": "vocab:hanzi"
+    },
+    {
+     "id": "tone",
+     "name": "Thanh điệu",
+     "count": 7,
+     "source": "vocab:tone"
+    }
+   ]
+  },
+  "6": {
+   "title": "Thi thử HSK 6 – từ vựng (tự biên soạn)",
+   "minutes": 30,
+   "sections": [
+    {
+     "id": "lw",
+     "name": "Nghe từ",
+     "count": 8,
+     "source": "listen-word"
+    },
+    {
+     "id": "mean",
+     "name": "Chọn nghĩa",
+     "count": 15,
+     "source": "vocab:meaning"
+    },
+    {
+     "id": "hz",
+     "name": "Chọn chữ theo nghĩa",
+     "count": 10,
+     "source": "vocab:hanzi"
+    },
+    {
+     "id": "tone",
+     "name": "Thanh điệu",
+     "count": 7,
+     "source": "vocab:tone"
     }
    ]
   }
@@ -62,6 +242,26 @@
    "1": {
     "listening": 20,
     "reading": 20
+   },
+   "2": {
+    "listening": 35,
+    "reading": 25
+   },
+   "3": {
+    "listening": 40,
+    "reading": 30
+   },
+   "4": {
+    "listening": 45,
+    "reading": 40
+   },
+   "5": {
+    "listening": 45,
+    "reading": 45
+   },
+   "6": {
+    "listening": 50,
+    "reading": 50
    }
   }
  }

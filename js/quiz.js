@@ -83,8 +83,8 @@ export function buildTest(blueprint, bank) {
   const used = new Set();
   for (const sec of blueprint.sections) {
     let cand = [];
-    if (sec.source === 'vocab') {
-      const kinds = ['meaning', 'hanzi', 'tone', 'fill'];
+    if (sec.source === 'vocab' || sec.source.startsWith('vocab:')) {
+      const kinds = sec.source === 'vocab' ? ['meaning', 'hanzi', 'tone', 'fill'] : [sec.source.slice(6)];
       const words = shuffle(bank.words);
       let k = 0;
       for (const w of words) {
@@ -95,8 +95,18 @@ export function buildTest(blueprint, bank) {
           if (q && !used.has(q.id)) { cand.push(q); k++; break; }
         }
       }
+    } else if (sec.source === 'listen-word') {
+      // Nghe từ (giọng đọc thiết bị), chọn chữ Hán đúng — chỉ khi máy có giọng tiếng Trung
+      if (bank.tts) {
+        for (const w of shuffle(bank.words)) {
+          if (cand.length >= sec.count) break;
+          const q = vocabQuestion(w, bank.words, 'hanzi');
+          if (!q || used.has('lw-' + w.id)) continue;
+          cand.push({ ...q, id: 'lw-' + w.id, type: 'listen-choice', skill: 'listening', prompt: 'Nghe và chọn từ bạn nghe được:', lines: [{ zh: w.hanzi, py: w.pinyin }] });
+        }
+      }
     } else if (sec.source === 'listening') {
-      cand = shuffle(bank.listeningQs || []).slice(0, sec.count);
+      cand = shuffle((bank.listeningQs || []).filter((q) => !used.has(q.id))).slice(0, sec.count);
     } else if (sec.source.startsWith('q:')) {
       const skill = sec.source.slice(2);
       const pool = (bank.questions || []).filter((q) => q.skill === skill && q.type !== 'open' && !used.has(q.id));

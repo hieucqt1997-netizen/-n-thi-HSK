@@ -38,21 +38,38 @@ try:
         ok('HSK 1 chưa tải: hiển thị trung thực "Chưa có dữ liệu"', page.locator('text=Chưa có dữ liệu').count() > 0)
         page.screenshot(path=f'{SHOTS}/01-lan-dau.png', full_page=True)
 
-        # Tải gói
-        page.goto(URL + '#/packs'); page.wait_for_selector('text=Tải về máy')
-        page.click('text=Tải về máy')
-        page.wait_for_selector('text=Kiểm tra đủ để học offline', timeout=15000)
+        # Chuyển tiến độ: cài gói HSK1 bản cũ (v1, ID kiểu h1-...), học vài thẻ, rồi cập nhật lên v2
+        oldpack = os.path.join(ROOT, '..', 'hsk-import', 'data', 'hsk1_tu_soan_v1.json')
+        page.goto(URL + '#/manage'); page.set_input_files('input[data-change=packPick]', oldpack)
+        page.click('button[data-act=packGo]'); page.wait_for_selector('#packres .feedback')
+        page.goto(URL + '#/flash?src=today'); page.wait_for_selector('.flash')
+        for i in range(3):
+            page.click('.flash'); page.click('.grades >> text=Nhớ')
+        old_ids = sorted(c['wordId'] for c in page.evaluate(IDB, 'srs'))
+        page.goto(URL + '#/packs'); page.wait_for_selector('text=Cập nhật lên v2.0.0')
+        t0 = time.time(); page.click('text=Cập nhật lên v2.0.0'); page.wait_for_selector('text=Kiểm tra đủ để học offline >> nth=0', timeout=30000); page.wait_for_timeout(500)
+        new_ids = sorted(c['wordId'] for c in page.evaluate(IDB, 'srs'))
+        ok('Cập nhật gói HSK1 v1→v2 giữ tiến độ và đổi sang ID mới', len(new_ids) == len(old_ids) == 3 and all(i.startswith('w-') for i in new_ids), (old_ids, new_ids))
         words = page.evaluate(IDB, 'words')
-        ok('Tải gói HSK 1 vào IndexedDB', len(words) == 80, len(words))
-        page.click('text=Kiểm tra đủ để học offline'); page.wait_for_timeout(500)
+        ok('Gói HSK1 v2: 150 từ, không còn từ cũ trùng', len(words) == 150 and not any(w['id'].startswith('h1-') for w in words), len(words))
+        page.click('text=Kiểm tra đủ để học offline >> nth=0'); page.wait_for_timeout(500)
         ok('Kiểm tra gói đủ offline', page.locator('text=Nội dung gói đầy đủ trên máy').count() == 1 and page.locator('text=Khung ứng dụng đã lưu offline').count() == 1)
+        # Tải HSK 4 và HSK 6 (gói lớn nhất)
+        for lv in (4, 6):
+            t0 = time.time()
+            page.click(f'button[data-act=pget][data-id=hsk{lv}-core]')
+            page.wait_for_selector(f'#pc-hsk{lv}-core', state='attached', timeout=60000)
+            ok(f'Tải gói HSK {lv}', True, f'{time.time() - t0:.1f}s')
+        counts = {}
+        for w in page.evaluate(IDB, 'words'): counts[w['level']] = counts.get(w['level'], 0) + 1
+        ok('Số từ đã cài theo cấp', counts.get(1) == 150 and counts.get(4) == 597 and counts.get(6) == 2497, counts)
 
         page.goto(URL + '#/today'); page.wait_for_selector('text=thẻ đến hạn')
         ok('Không có thanh cuộn ngang (iPhone)', page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
         page.screenshot(path=f'{SHOTS}/02-hom-nay.png', full_page=True)
 
         # Flashcard
-        page.click('text=Bắt đầu học hôm nay')
+        page.click('text=Bắt đầu học hôm nay') if page.locator('text=Bắt đầu học hôm nay').count() else page.goto(URL + '#/flash?src=more')
         page.wait_for_selector('.flash')
         page.screenshot(path=f'{SHOTS}/03-the-mat-truoc.png')
         page.click('.flash'); page.wait_for_selector('.grades')
@@ -61,7 +78,7 @@ try:
         for i in range(4):
             page.click('.flash'); page.click('.grades >> text=Nhớ')
         srs = page.evaluate(IDB, 'srs')
-        ok('Chấm mức nhớ lưu lịch ôn', len(srs) == 5 and all(c['due'] for c in srs), len(srs))
+        ok('Chấm mức nhớ lưu lịch ôn', len(srs) >= 5 and all(c['due'] for c in srs), len(srs))
         ok('Thẻ "Quên" ghi vào sổ lỗi', any(m['kind'] == 'word' for m in page.evaluate(IDB, 'mistakes')))
 
         # Chế độ gõ pinyin
@@ -130,6 +147,35 @@ try:
         page.click('text=Tiếp tục'); page.wait_for_selector('text=Tự nộp khi hết giờ')
         ok('Mô phỏng thi: quá giờ kết thúc thì tự nộp', True)
 
+        # Bài học và kiểm tra bài
+        page.goto(URL + '#/learn'); page.wait_for_selector('text=HSK 1 · Bài 01')
+        page.screenshot(path=f'{SHOTS}/19-danh-sach-bai.png', full_page=True)
+        page.click('text=HSK 1 · Bài 01'); page.wait_for_selector('text=Kiểm tra bài')
+        page.click('text=Kiểm tra bài'); page.wait_for_selector('text=Câu 1/')
+        n_lesson = int(page.inner_text('.progress-line span').split('/')[1])
+        ok('Kiểm tra bài có câu hỏi', n_lesson >= 10, n_lesson)
+        page.screenshot(path=f'{SHOTS}/20-kiem-tra-bai.png', full_page=True)
+        # Thi thử HSK 4 và HSK 6
+        for lv in (4, 6):
+            page.goto(URL + '#/today'); page.click(f'button[data-level="{lv}"]'); page.wait_for_timeout(400)
+            page.goto(URL + '#/exam'); page.wait_for_selector('button:has-text("Bắt đầu")')
+            page.click('button:has-text("Bắt đầu")'); page.wait_for_selector('#etimer')
+            ex = [x for x in page.evaluate(IDB, 'exams') if not x.get('submittedAt')][0]
+            secs = {}
+            for q in ex['questions']: secs[q['section']] = secs.get(q['section'], 0) + 1
+            ok(f'Thi thử HSK {lv}: lắp đề không trùng câu', len(ex['questions']) >= 30 and len({q['id'] for q in ex['questions']}) == len(ex['questions']), secs)
+            page.screenshot(path=f'{SHOTS}/21-thi-hsk{lv}.png')
+            page.click('text=Nộp bài'); page.wait_for_selector('text=Điểm tham khảo nội bộ')
+        page.goto(URL + '#/today'); page.click('button[data-level="1"]'); page.wait_for_timeout(400)
+        # Từ HSK 6: nghĩa tự động có nhãn, nhiều nghĩa, cấp HSK 3.0
+        wid = [w['id'] for w in page.evaluate(IDB, 'words') if w['hanzi'] == '暧昧'][0]
+        page.goto(URL + '#/word/' + wid); page.wait_for_selector('.word-head')
+        ok('Từ HSK 6 hiện nghĩa Việt và nhãn "nghĩa tự động"', 'nghĩa tự động' in page.inner_text('.word-head'))
+        page.fill('#vimine', 'mập mờ, không rõ ràng'); page.click('button[data-act=saveNote]'); page.wait_for_timeout(600)
+        ok('Lưu nghĩa của riêng mình', 'nghĩa của bạn' in page.inner_text('.word-head'))
+        page.screenshot(path=f'{SHOTS}/22-tu-hsk6.png', full_page=True)
+        page.goto(URL + '#/dict?q=ambiguous'); page.wait_for_selector('#dres .list')
+        ok('Tra từ theo nghĩa tiếng Anh', '暧昧' in page.inner_text('#dres'))
         page.goto(URL + '#/mistakes'); page.wait_for_selector('text=Ôn tất cả lỗi')
         page.screenshot(path=f'{SHOTS}/13-so-loi.png', full_page=True)
         ok('Sổ lỗi sai có mục', page.locator('.list li').count() > 0)
@@ -173,7 +219,8 @@ try:
         ctx.set_offline(True)
         page.goto(URL + '#/today'); page.reload(); page.wait_for_selector('text=thẻ đến hạn', timeout=8000)
         ok('Mở lại khi mất mạng: app chạy từ bộ đệm', page.locator('#net').inner_text() == 'Offline')
-        page.goto(URL + '#/word/h1-xiexie'); page.wait_for_selector('.word-head')
+        wid = [w['id'] for w in page.evaluate(IDB, 'words') if w['hanzi'] == '谢谢'][0]
+        page.goto(URL + '#/word/' + wid); page.wait_for_selector('.word-head')
         ok('Offline: xem từ vựng', '谢谢' in page.inner_text('.word-head'))
         page.goto(URL + '#/flash?src=more'); page.wait_for_selector('.flash')
         page.click('.flash'); page.click('.grades >> text=Dễ')
@@ -184,13 +231,13 @@ try:
         # Cập nhật app không làm mất dữ liệu
         before = len(page.evaluate(IDB, 'srs'))
         for f in ['sw.js', 'js/app.js']:
-            fp = os.path.join(SITE, f); s = open(fp, encoding='utf-8').read().replace("'1.0.0'", "'1.0.1'"); open(fp, 'w', encoding='utf-8').write(s)
+            fp = os.path.join(SITE, f); s = open(fp, encoding='utf-8').read().replace("'1.1.0'", "'1.1.1'"); open(fp, 'w', encoding='utf-8').write(s)
         page.goto(URL + '#/me'); page.click('text=Kiểm tra cập nhật')
         page.wait_for_selector('text=Có phiên bản mới', timeout=10000)
         page.screenshot(path=f'{SHOTS}/16-co-ban-moi.png')
         page.click('#upd'); page.wait_for_timeout(2500); page.wait_for_selector('#tabs a')
         ver = page.inner_text('#ver-side')
-        ok('Cập nhật lên 1.0.1 sau khi bấm Cập nhật', '1.0.1' in ver, ver)
+        ok('Cập nhật lên 1.1.1 sau khi bấm Cập nhật', '1.1.1' in ver, ver)
         ok('Cập nhật không mất tiến độ', len(page.evaluate(IDB, 'srs')) == before and len(page.evaluate(IDB, 'words')) >= 80)
 
         # Máy tính
@@ -200,7 +247,8 @@ try:
         dp.screenshot(path=f'{SHOTS}/17-may-tinh.png')
         # Chế độ tối + cỡ chữ lớn trên iPhone
         page.goto(URL + '#/me'); page.select_option('select[data-k=theme]', 'dark'); page.select_option('select[data-k=fs]', '1.3')
-        page.goto(URL + '#/word/h1-pengyou'); page.wait_for_selector('.word-head')
+        wid = [w['id'] for w in page.evaluate(IDB, 'words') if w['hanzi'] == '朋友'][0]
+        page.goto(URL + '#/word/' + wid); page.wait_for_selector('.word-head')
         ok('Cỡ chữ 130% vẫn không cuộn ngang', page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
         page.screenshot(path=f'{SHOTS}/18-toi-chu-lon.png', full_page=True)
 

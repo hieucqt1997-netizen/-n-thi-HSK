@@ -1,4 +1,15 @@
-# Sổ tay tiếng Trung HSK — Hướng dẫn sử dụng và bàn giao (bản 1.0.0)
+# Sổ tay tiếng Trung HSK — Hướng dẫn sử dụng và bàn giao (bản 1.1.0)
+
+## Mới ở bản 1.1.0: đủ HSK 1–6
+
+- **6 gói từ vựng** (4.936 từ) dựng từ 6 tệp PDF của anh, đã làm sạch và đối chiếu — chi tiết trong `BAO-CAO-DU-LIEU.md`.
+- **231 bài học**, chia theo độ phổ biến của từ (từ thông dụng học trước): HSK1 15 bài × 10 từ, HSK2 16 × 10, HSK3 20 × 15, HSK4 30 × 20, HSK5 50 × 25, HSK6 100 × 25.
+- Mỗi bài: **Học bằng thẻ** và **Kiểm tra bài** (mỗi từ một câu: chọn nghĩa / chọn chữ / thanh điệu / điền từ vào câu, cộng câu sắp xếp, đọc hiểu, nghe nếu có).
+- **Thi thử cho cả 6 cấp** (tự biên soạn, có hẹn giờ), chọn phạm vi "toàn cấp" hoặc "chỉ các từ đã học".
+- Trang từ: nhiều nghĩa kèm từ loại, nhãn **HSK 3.0: cấp …** (tham khảo), nhãn **nghĩa tự động** cho nghĩa lấy từ từ điển, ô **Nghĩa của bạn** để tự sửa nghĩa (có trong bản sao lưu).
+- Tra từ được cả bằng nghĩa tiếng Anh.
+- Cập nhật gói HSK 1 cũ lên bản mới **tự chuyển tiến độ** sang từ mới (đã kiểm thử).
+
 
 Ứng dụng web cài lên Màn hình chính (PWA), ưu tiên iPhone. Không cần tài khoản, không có máy chủ lưu dữ liệu, không dùng AI hay dịch vụ trả phí. Sau khi cài và tải gói học, app chạy được khi mất mạng.
 
@@ -144,7 +155,7 @@ Gói đặt sẵn trên web: chép tệp vào `packs/hskN/pack.json` (âm thanh 
 
 ### Chưa có / giới hạn thực tế
 
-- **Dữ liệu**: chỉ có **HSK 1** với 80 từ, 8 mẫu ngữ pháp, 3 bài đọc, 4 hội thoại nghe, 39 câu hỏi. Các cấp HSK 2–6 chưa có dữ liệu.
+- **Dữ liệu**: HSK 1–6 đủ từ vựng. Ngữ pháp, bài đọc đoạn văn, hội thoại nghe chỉ có ở HSK 1. Câu ví dụ HSK 3–4 chưa dịch tiếng Việt; HSK 5–6 chưa có câu ví dụ nên chỉ luyện từ (nghĩa, chữ, thanh điệu, nghe từ).
 - **Âm thanh**: gói HSK 1 chưa có audio người đọc thật.
 - **Đề mô phỏng chuẩn**: đang khóa, vì cấu trúc đề chưa xác minh từ nguồn chính thức và ngân hàng câu hỏi chưa đủ.
 - **Chưa có**:
@@ -166,7 +177,9 @@ Gói đặt sẵn trên web: chép tệp vào `packs/hskN/pack.json` (âm thanh 
 - Gộp bản sao lưu không nhân đôi dữ liệu.
 - Lắp đề không trùng câu và báo thiếu câu trung thực.
 
-**Kiểm thử trên trình duyệt: 35/35 đạt** (`python tests/e2e.py`). Chạy bằng **Chromium giả lập khung iPhone 13**, kèm một lượt ở khung máy tính. Ảnh chụp nằm trong `tests/screenshots/`. Các tình huống đã kiểm:
+**Bản 1.1.0: kiểm thử logic 17/17 đạt, kiểm thử trình duyệt 45/45 đạt** — thêm: kiểm tra toàn bộ 6 gói (ID không trùng, đủ nghĩa Việt, không còn ký tự bộ thủ, bài sắp xếp ghép đúng), cập nhật gói HSK1 v1→v2 giữ tiến độ, tải HSK4/HSK6, kiểm tra bài, thi thử HSK4/HSK6, sửa nghĩa riêng, tra bằng tiếng Anh.
+
+**Bản 1.0.0 — kiểm thử trên trình duyệt: 35/35 đạt** (`python tests/e2e.py`). Chạy bằng **Chromium giả lập khung iPhone 13**, kèm một lượt ở khung máy tính. Ảnh chụp nằm trong `tests/screenshots/`. Các tình huống đã kiểm:
 
 - Tải gói, học thẻ, đóng/mở lại vẫn giữ tiến độ.
 - Bài thi bị gián đoạn rồi phục hồi; chế độ mô phỏng hết giờ thì tự nộp.
@@ -223,3 +236,8 @@ templates/                  mẫu CSV và JSON để nhập
 tools/                      script sinh gói HSK 1 và tài nguyên (Python)
 tests/                      kiểm thử + ảnh chụp màn hình
 ```
+
+## 13. Lưu ý bản quyền dữ liệu (bản 1.1.0)
+
+- Nghĩa tiếng Việt HSK 3–6 lấy từ CVDICT (giấy phép CC BY-SA 4.0): dùng cá nhân thoải mái; nếu chia sẻ lại phải ghi nguồn và giữ cùng giấy phép.
+- Danh sách HSK 5–6 lấy từ bản in một trang web thương mại. Nếu đưa app lên GitHub Pages công khai thì ai có link cũng tải được các gói. Cách an toàn: xóa thư mục `packs/hsk5`, `packs/hsk6` (và 2 dòng tương ứng trong `packs/index.json`) trước khi đưa lên, rồi nhập 2 gói đó vào iPhone bằng **Cá nhân → Quản lý nội dung → Nhập gói** (chọn tệp `pack.json` lưu trong ứng dụng Tệp).

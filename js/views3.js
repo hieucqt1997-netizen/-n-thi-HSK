@@ -11,16 +11,24 @@ import { PERSONAL, CONTENT, STORES } from './db.js';
 import * as media from './media.js';
 
 // ======================= Thi thử =======================
-async function examBank(level) {
-  const d = await levelData(level);
+async function examBank(level, scope = 'all') {
+  const d0 = await levelData(level);
   const st = await media.ttsStatus();
+  let d = d0;
+  if (scope === 'learned') {
+    const learned = new Set((await db.all('srs')).filter((c) => c.due).map((c) => c.wordId));
+    const ws = d0.words.filter((w) => learned.has(w.id));
+    const lessonsLearned = new Set(ws.map((w) => w.lesson));
+    d = { ...d0, words: ws, questions: d0.questions.filter((q) => !q.lesson || lessonsLearned.has(q.lesson)) };
+  }
   const lqs = await hydrate(d.questions.filter((q) => q.skill === 'listening'));
   const audioOk = async (q) => (q.audioKey ? !!(await db.get('audio', q.audioKey)) : false);
   const usable = [];
   for (const q of lqs) if ((await audioOk(q)) || (st.ok && q.lines)) usable.push(q);
-  return { words: d.words, questions: await hydrate(d.questions), listeningQs: usable, tts: st, listeningTotal: lqs.length };
+  return { words: d.words.length >= 4 ? d.words : d0.words, questions: await hydrate(d.questions.filter((q) => q.skill !== 'listening')), listeningQs: usable, tts: st.ok, ttsMsg: st.msg, listeningTotal: lqs.length, learnedCount: d.words.length };
 }
 
+let scopeMem = 'all';
 routes.exam = async () => {
   setTitle('Thi thử · HSK ' + S.level);
   const cfg = await config();
@@ -33,7 +41,8 @@ routes.exam = async () => {
   if (running) body += `<div class="card warn row between"><div><b>Đang làm dở:</b> ${esc(running.title)}<br><small>${running.mode === 'sim' ? 'Mô phỏng thi — thời gian vẫn chạy khi thoát' : 'Luyện tập — đã tạm dừng'}</small></div><a class="btn primary" href="#/exam-run/${running.id}">Tiếp tục</a></div>`;
   if (!bp) body += `<div class="card warn"><b>Chưa có cấu hình bài kiểm tra cho HSK ${lv}.</b><p class="muted">Cần có dữ liệu và cấu hình trong config/hsk-versions.json.</p></div>`;
   else {
-    const bank = await examBank(lv);
+    const scope = scopeMem;
+    const bank = await examBank(lv, scope);
     const dry = buildTest(bp, bank);
     const sections = bp.sections.map((s) => {
       const m = dry.missing.find((x) => x.section === s.name);
@@ -43,7 +52,8 @@ routes.exam = async () => {
     body += `<div class="card"><h3>${esc(bp.title)}</h3>
       <p class="muted" style="margin:4px 0 8px">Đề do ứng dụng tự lắp từ ngân hàng câu hỏi tự biên soạn — <b>không phải đề thi thật</b>, không theo đúng cấu trúc đề chính thức. ${bp.minutes} phút.</p>
       <div class="scroll-x"><table class="t"><tr><th>Phần</th><th>Số câu</th><th>Ngân hàng</th></tr>${sections}</table></div>
-      ${!bank.tts.ok && bank.listeningTotal ? `<p class="muted" style="font-size:.85em">Phần nghe: ${esc(bank.tts.msg)} Các câu nghe không phát được sẽ bị bỏ khỏi đề.</p>` : ''}
+      ${!bank.tts ? `<p class="muted" style="font-size:.85em">Phần nghe: ${esc(bank.ttsMsg)} Các câu nghe không phát được sẽ bị bỏ khỏi đề.</p>` : ''}
+      <label class="f"><span>Phạm vi từ vựng</span><select data-change="scope"><option value="all" ${scope === 'all' ? 'selected' : ''}>Toàn bộ HSK ${lv}</option><option value="learned" ${scope === 'learned' ? 'selected' : ''}>Chỉ các từ đã học (${bank.learnedCount} từ)</option></select></label>
       ${dry.missing.length ? '<p class="muted" style="font-size:.85em">Phần thiếu câu sẽ chỉ có số câu hiện có.</p>' : ''}
       <label class="f"><span>Chế độ</span><select id="emode"><option value="practice">Luyện tập — thoát app thì tạm dừng đồng hồ</option><option value="sim">Mô phỏng thi — tính theo giờ kết thúc, thoát app vẫn tính giờ</option></select></label>
       <button class="btn primary block" data-act="start" ${can && !running ? '' : 'disabled'}>${running ? 'Hãy hoàn thành bài đang làm trước' : can ? 'Bắt đầu' : 'Chưa đủ câu hỏi'}</button></div>`;
@@ -57,8 +67,9 @@ routes.exam = async () => {
   const done = exams.filter((x) => x.submittedAt);
   body += done.length ? `<ul class="list">${done.map((x) => `<li><a href="#/exam-result/${x.id}"><div class="grow"><b>${x.result.correct}/${x.result.total}</b> · ${esc(x.title)}<div class="sub">${fmtDate(x.submittedAt)} · ${x.mode === 'sim' ? 'Mô phỏng' : 'Luyện tập'}</div></div><span class="chev">›</span></a></li>`).join('')}</ul>` : '<p class="muted">Chưa có lần thi nào.</p>';
   main.innerHTML = body;
+  H.scope = (el) => { scopeMem = el.value; refresh(); };
   H.start = async () => {
-    const bank = await examBank(lv);
+    const bank = await examBank(lv, scopeMem);
     const { questions } = buildTest(bp, bank);
     const mode = $('#emode').value;
     const ms = bp.minutes * 60000;
@@ -239,7 +250,11 @@ async function installPack(pack, audioFiles = new Map(), baseUrl = null, progres
   const pid = pack.id;
   const tag = (x) => ({ ...x, packId: pid, level: Number.isInteger(x.level) ? x.level : pack.level });
   progress('Đang ghi nội dung…');
+  // Bản cũ của cùng gói: nhớ từ cũ để chuyển tiến độ, rồi xóa nội dung cũ (không xóa tiến độ)
+  const oldWords = await db.byIndex('words', 'packId', pid);
+  for (const s of CONTENT) await db.delByIndex(s, 'packId', pid);
   for (const s of CONTENT) await db.putMany(s, (pack[s] || []).map(tag));
+  const moved = await migrateProgress(pack, oldWords);
   const wanted = new Set([...(pack.audioFiles || []), ...(pack.words || []).map((w) => w.audio), ...(pack.listening || []).map((l) => l.audio)].filter(Boolean));
   const missing = [];
   let i = 0;
@@ -258,7 +273,35 @@ async function installPack(pack, audioFiles = new Map(), baseUrl = null, progres
   await db.put('packs', { id: pid, level: pack.level, title: pack.title || pid, version: pack.version || '', hskVersion: pack.hskVersion || '', hskVersionNote: pack.hskVersionNote || '',
     source: pack.source || '', license: pack.license || '', reviewed: pack.reviewed || '', counts, installedAt: nowISO(), bytes: JSON.stringify(pack).length + bytes, audioMissing: missing });
   invalidate();
-  return { counts, missing };
+  return { counts, missing, moved };
+}
+
+/** Chuyển lịch ôn và sổ lỗi từ ID từ cũ sang ID mới (theo bảng ánh xạ của gói hoặc theo chữ Hán + pinyin). */
+const pyBase = (p) => String(p || '').normalize('NFD').toLowerCase().replace(/u\u0308|u:/g, 'v').replace(/[^a-z]/g, '');
+async function migrateProgress(pack, oldWords) {
+  const newIds = new Set((pack.words || []).map((w) => w.id));
+  const byHz = new Map();
+  for (const w of pack.words || []) { const k = w.hanzi + '|' + pyBase(w.pinyin); if (!byHz.has(k)) byHz.set(k, w.id); if (!byHz.has(w.hanzi)) byHz.set(w.hanzi, w.id); }
+  const map = new Map(Object.entries(pack.migrate?.idMap || {}));
+  for (const ow of oldWords) {
+    if (newIds.has(ow.id) || map.has(ow.id)) continue;
+    const nid = byHz.get(ow.hanzi + '|' + pyBase(ow.pinyin)) || byHz.get(ow.hanzi);
+    if (nid) map.set(ow.id, nid);
+  }
+  if (!map.size) return 0;
+  let n = 0;
+  for (const [oid, nid] of map) {
+    const c = await db.get('srs', oid);
+    if (c) {
+      const exist = await db.get('srs', nid);
+      if (!exist || (c.updatedAt || '') > (exist.updatedAt || '')) await db.put('srs', { ...c, wordId: nid, updatedAt: nowISO() });
+      await db.del('srs', oid);
+      n++;
+    }
+    const m = await db.get('mistakes', 'w:' + oid);
+    if (m) { await db.put('mistakes', { ...m, id: 'w:' + nid, refId: nid }); await db.del('mistakes', 'w:' + oid); }
+  }
+  return n;
 }
 async function checkPack(p) {
   const res = [];
@@ -307,7 +350,7 @@ routes.packs = async () => {
       const pack = await res.json();
       const g0 = gen();
       const out = await installPack(pack, new Map(), url, (m) => { el.textContent = m; });
-      toast(out.missing.length ? `Đã tải, nhưng thiếu ${out.missing.length} tệp âm thanh` : 'Đã tải xong gói ' + r.title, 4000);
+      toast((out.missing.length ? `Đã tải, nhưng thiếu ${out.missing.length} tệp âm thanh` : 'Đã tải xong gói ' + r.title) + (out.moved ? ` · đã chuyển tiến độ ${out.moved} từ` : ''), 5000);
       if (g0 === gen()) refresh();
     } catch (e) { el.disabled = false; el.textContent = 'Thử lại'; toast(e.message, 6000); }
   };

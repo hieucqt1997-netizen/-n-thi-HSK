@@ -1,0 +1,400 @@
+# Nghĩa tiếng Việt theo từng nghĩa + dịch câu ví dụ, HSK 1–2. Soạn tay (Claude), cần giáo viên rà lại.
+# Định dạng: chữ#số nghĩa|nghĩa tiếng Việt|dịch câu ví dụ (nhiều câu cách nhau " / ")
+爱#0|yêu|Mẹ ơi, con yêu mẹ.
+爱#1|thích (làm gì)|Tôi thích ăn cơm.
+八#0|tám, số 8|Con trai anh ấy năm nay tám tuổi.
+爸爸#0|bố, ba|Bố tôi là bác sĩ.
+杯子#0|cốc, ly|Trong cốc có trà.
+北京#0|Bắc Kinh|Tôi sống ở Bắc Kinh.
+本#0|cuốn, quyển (lượng từ cho sách vở)|Trên bàn có một cuốn sách.
+本#1|quyển vở|Mời cả lớp lấy vở bài tập ra.
+不客气#0|đừng khách sáo, không có gì|A: Cảm ơn bạn! B: Không có gì.
+不#0|không (phủ định)|Tôi không phải là học sinh.
+菜#0|rau|Tôi đi siêu thị mua ít rau.
+菜#1|món ăn|Hôm nay tôi nấu ba món.
+茶#0|trà|Mời uống chén trà.
+吃#0|ăn|Mời ăn chút cơm.
+出租车#0|xe taxi|Chúng tôi đi taxi đến ga tàu.
+打电话#0|gọi điện thoại|Anh ấy đang gọi điện thoại.
+大#0|to, lớn|Quả táo này rất to.
+的#0|của (trợ từ định ngữ)|Đây là sách của tôi.
+的#1|(nhấn mạnh trong cấu trúc 是……的)|Tôi đi máy bay đến Trung Quốc.
+的#2|(cái / thứ… — thay cho danh từ)|Trong nhà hết đồ ăn rồi, chúng ta đi mua ít nhé.
+点#0|giờ (giờ đồng hồ)|Bây giờ là 3 giờ 20 chiều.
+点#1|gọi (món)|Thưa ông, xin hỏi khi nào ông bắt đầu gọi món?
+点#2|châm, đốt (lửa)|Bạn châm lửa đi.
+电脑#0|máy tính|Tôi mua một cái máy tính.
+电视#0|ti vi, truyền hình|Mẹ đang xem ti vi.
+电影#0|phim, điện ảnh|Tôi thích xem phim.
+东西#0|đồ, đồ vật|Tôi mua rất nhiều đồ ở cửa hàng.
+都#0|đều, tất cả|Chúng tôi đều đến rồi.
+都#1|(nhấn mạnh) đến cả, gần như|Tôi sắp ăn hết rồi.
+都#2|đã (nhấn mạnh thời gian)|Đã ba giờ rồi, chúng ta sắp muộn rồi.
+读#0|đọc|Bạn đọc được chữ Hán này không? / Bạn có thích đọc sách không?
+对不起#0|xin lỗi|A: Xin lỗi. B: Không sao.
+多#0|nhiều|Ở đây rất đông người.
+多#1|bao (nhiêu) — hỏi số lượng, mức độ|Con trai bạn bao nhiêu tuổi rồi?
+多#2|biết bao, thật là (cảm thán)|Anh ấy chạy nhanh biết bao!
+多少#0|bao nhiêu|Trường các bạn có bao nhiêu học sinh?
+儿子#0|con trai|Con trai tôi ba tuổi rồi.
+二#0|hai, số 2|Bây giờ là mười hai giờ rồi.
+饭店#0|nhà hàng; khách sạn (lớn)|Trưa nay chúng ta đi nhà hàng ăn nhé.
+飞机#0|máy bay|Tôi đi máy bay đến Bắc Kinh.
+分钟#0|phút|Tôi muốn nghỉ vài phút.
+高兴#0|vui, vui mừng|Hôm nay tôi rất vui.
+个#0|cái, chiếc, người (lượng từ chung)|Tôi là một học sinh.
+工作#0|công việc|Tôi rất thích công việc hiện tại.
+工作#1|làm việc|Tôi làm việc ở bệnh viện.
+汉语#0|tiếng Hán, tiếng Trung|Anh ấy đang học tiếng Trung.
+好#0|tốt, đẹp, khỏe, hay|Hôm nay thời tiết rất đẹp.
+好#1|được, nhé (đồng ý / đề nghị)|Bạn nghe tôi nói, được không?
+好#2|rất, thật (cảm thán)|Quần áo của bạn đẹp quá!
+号#0|ngày (trong tháng)|Hôm nay là ngày 1 tháng 1 năm 2002.
+号#1|số (thứ tự)|Số phòng của bạn là bao nhiêu?
+喝#0|uống|Tôi muốn uống nước.
+和#0|và|Bố và mẹ đều ở nhà.
+和#1|với, cùng|Anh ấy đang nói chuyện với ông Vương.
+很#0|rất|Cô Lý rất xinh.
+后面#0|phía sau, đằng sau|Cửa hàng ở phía sau trường học.
+后面#1|sau đó, phần sau|Về vấn đề này, phần sau tôi sẽ nói kỹ.
+回#0|về, trở về|Tôi về nhà lúc tám giờ.
+回#1|lần, lượt (lượng từ động lượng)|Tôi đã đi Bắc Kinh một lần.
+会#0|biết (làm gì, do học mà biết)|Tôi biết lái xe.
+会#1|(sau động từ) được, biết — chỉ kết quả|Tôi đã học được tiếng Trung.
+会#2|có thể, sẽ (khả năng)|Ngày mai sẽ không mưa đâu.
+会#3|cuộc họp|Chúng tôi đang họp.
+几#0|mấy (hỏi số lượng nhỏ)|Bạn có mấy đứa con trai?
+几#1|vài, mấy (số lượng không xác định)|Nhà tôi có mấy người đến chơi.
+家#0|nhà, gia đình|Nhà tôi ở Bắc Kinh.
+家#1|(lượng từ cho gia đình, cửa hàng, công ty)|Anh trai tôi đã mở một công ty.
+叫#0|gọi, tên là|Tên tôi là Lý Minh.
+今天#0|hôm nay|Hôm nay tôi đi Bắc Kinh.
+今天#1|ngày nay, hiện nay|Ngày nay, nhiều thứ của quá khứ chúng ta không còn hiểu lắm.
+九#0|chín, số 9|Hôm nay là ngày 9 tháng 8.
+开#0|lái (xe)|Tôi đã lái taxi được ba năm.
+开#1|mở, thành lập|Bố tôi mở một công ty nhỏ.
+开#2|mở (cửa)|Mở cửa cho tôi vào với.
+开#3|tổ chức (họp, hội)|Mùa hè hằng năm trường tôi tổ chức hội thao.
+看#0|nhìn, xem|Bạn nhìn kìa, cuốn sách đó ở trên bàn.
+看#1|đọc (sách); thưởng thức|Tôi đang đọc sách.
+看见#0|nhìn thấy|Tôi không nhìn thấy anh ấy.
+块#0|đồng (đơn vị tiền tệ, khẩu ngữ)|Cuốn sách này ba mươi đồng.
+块#1|miếng, mẩu|Lại ăn miếng dưa hấu đi.
+块#2|cùng (một chỗ) — trong 一块儿|Tôi đang ở cùng bạn.
+来#0|đến, tới|Anh ấy đến đây hôm qua.
+来#1|(thay cho động từ cụ thể) làm, lấy, dùng|Dùng thêm ít hoa quả nhé?
+老师#0|giáo viên, thầy/cô|Ông ấy chính là thầy dạy tiếng Trung của chúng tôi.
+了#0|rồi (cuối câu: thay đổi trạng thái)|Hôm qua trời mưa.
+了#1|(sau động từ: hành động đã hoàn thành)|Ăn cơm xong tôi sẽ sang chỗ bạn.
+冷#0|lạnh|Hôm nay lạnh quá.
+里#0|trong, bên trong|Chúng tôi đều ở trong trường.
+零#0|số không, linh|Năm nay là năm 2012.
+六#0|sáu, số 6|Trên bàn có sáu cái cốc.
+妈妈#0|mẹ, má|Mẹ tôi không có nhà.
+吗#0|không? à? (trợ từ hỏi cuối câu)|Bạn là người Trung Quốc à?
+买#0|mua|Tôi đã mua ít táo.
+没关系#0|không sao, không có gì|A: Xin lỗi! B: Không sao.
+没关系#1|không liên quan|Việc này không liên quan đến tôi.
+没有#0|không có; không bằng|Trong nhà tôi không có ai. / Tôi không cao bằng anh ấy.
+米饭#0|cơm|Tôi thích ăn cơm.
+明天#0|ngày mai|Hôm nay chủ nhật, ngày mai là thứ hai.
+名字#0|tên|Tên tôi là Lý Minh.
+哪#0|nào (đứng trước lượng từ)|Cái cốc nào là của bạn?
+哪儿#0|ở đâu, chỗ nào|Nhà bạn ở đâu?
+那#0|kia, đó|Tôi không quen người kia.
+那#1|chỗ kia, ở đó|Xe của chúng tôi ở đằng kia.
+呢#0|thế? nhỉ? (trợ từ hỏi)|Nhà các bạn có mấy người thế?
+呢#1|(cuối câu: đang tiếp diễn / khẳng định)|Tôi đang ngủ mà.
+能#0|có thể, được phép|Tôi ngồi đây được không?
+你#0|bạn, anh, chị (ngôi thứ hai)|Bạn có quen người này không?
+年#0|năm|Tôi đã sống ở Trung Quốc ba năm.
+女儿#0|con gái|Tôi có hai con gái.
+朋友#0|bạn, bạn bè|Anh ấy là bạn thân của tôi.
+漂亮#0|đẹp, xinh|Quần áo của bạn đẹp thật.
+苹果#0|quả táo|Bạn có muốn ăn một quả táo không?
+七#0|bảy, số 7|Một tuần có bảy ngày.
+钱#0|tiền|Một quả táo ba đồng.
+前面#0|phía trước, đằng trước|Người phía trước kia là bạn học của tôi.
+请#0|xin mời, làm ơn|Mời ngồi lên ghế.
+请#1|mời, nhờ|Tôi đi nhờ thầy giáo giúp.
+请#2|mời (ăn uống), khao|Anh ấy muốn mời tôi đi ăn.
+去#0|đi, đến (nơi nào)|Thứ tư tôi đi Trung Quốc.
+去#1|(sau động từ: hướng đi ra xa)|Con mèo chạy vào trong phòng rồi.
+去#2|bỏ đi, loại bỏ|Bỏ chữ này đi thì câu sẽ đúng.
+热#0|nóng|Hôm nay rất nóng.
+热#1|hâm nóng|Tôi đi hâm lại cơm.
+人#0|người|Trong cửa hàng có rất nhiều người.
+认识#0|quen, quen biết, nhận ra|Rất vui được làm quen với bạn.
+三#0|ba, số 3|Tôi có ba cuốn sách.
+商店#0|cửa hàng|Cô ấy đi cửa hàng mua đồ rồi.
+上#0|trên, phía trên|Hoa quả ở trên bàn.
+上#1|đi (học, làm) theo giờ cố định|Tám giờ chúng tôi đi học.
+上#2|lên|Chúng tôi đi thang máy lên tầng.
+上午#0|buổi sáng (trước trưa)|Bây giờ là 10 giờ sáng.
+少#0|ít|Nước trong cốc rất ít.
+少#1|thiếu|Tôi còn thiếu một cuốn sách.
+谁#0|ai|Người kia là ai?
+什么#0|gì, cái gì|Bạn đã nhìn thấy gì?
+什么#1|gì cũng (chỉ chung, không xác định)|Bạn giỏi thật, cái gì cũng biết!
+十#0|mười, số 10|Bây giờ là tháng mười.
+时候#0|lúc, khi|Lúc tôi về nhà, anh ấy đang ngủ.
+是#0|là|Anh ấy không phải là học sinh.
+是#1|phải, vâng|A: Bạn là người Trung Quốc à? / B: Vâng, tôi là người Trung Quốc.
+书#0|sách|Tôi thích đọc sách.
+水#0|nước|Trong cốc còn nước không?
+水果#0|hoa quả, trái cây|Tôi muốn đi cửa hàng mua hoa quả.
+睡觉#0|ngủ, đi ngủ|Con trai đang ngủ.
+说#0|nói|Bạn đang nói gì thế?
+说话#0|nói chuyện|Họ đang nói chuyện.
+四#0|bốn, số 4|Bốn người chúng tôi đi xem phim.
+岁#0|tuổi|Bác sĩ Lý năm nay 40 tuổi.
+他#0|anh ấy, ông ấy (ngôi thứ ba, nam)|Ông ấy là thầy giáo của chúng tôi.
+她#0|cô ấy, bà ấy (ngôi thứ ba, nữ)|Tôi quen mẹ của cô ấy.
+太#0|quá, lắm (khen, cảm thán)|Trường này to quá.
+太#1|quá (mức)|Quả táo này to quá, tôi ăn không hết.
+天气#0|thời tiết|Thời tiết hôm nay rất đẹp.
+听#0|nghe|Bạn nghe xem, ai đến thế?
+听#1|nghe theo|Việc này tôi nghe theo bạn.
+同学#0|bạn học; (gọi) các em, các bạn|Chào các em!
+喂#0|alô, này|Alô, thầy Lý có ở đó không ạ?
+我#0|tôi, mình|Tôi là một học sinh.
+我们#0|chúng tôi, chúng ta|Chúng tôi đều là học sinh.
+五#0|năm, số 5|Hôm nay thứ sáu.
+喜欢#0|thích|Tôi thích học tiếng Trung.
+下#0|dưới, bên dưới|Con mèo ở dưới bàn.
+下#1|rơi, xuống (mưa, tuyết)|Hôm nay trời mưa.
+下#2|sau, tới (kế tiếp)|Tháng sau tôi đi Bắc Kinh.
+下#3|xuống (xe, máy bay)|Anh ấy đang xuống máy bay.
+下#4|tan (ca, học)|Tám giờ chúng tôi tan làm.
+下午#0|buổi chiều|Chiều nay tôi không đến trường nữa.
+下雨#0|mưa, trời mưa|Hôm qua trời mưa.
+先生#0|ông, ngài; chồng|Bạn cũng quen ông Vương à?
+现在#0|bây giờ, hiện nay|Bây giờ là 12 giờ.
+想#0|muốn|Tôi muốn thứ bảy đi Bắc Kinh.
+想#1|nghĩ|Mẹ ơi, mẹ đang nghĩ gì thế?
+想#2|nhớ|Bố ơi, con nhớ bố rồi.
+小#0|nhỏ, bé|Quả táo này nhỏ quá.
+小#1|nhỏ đi, giảm|Mưa nhỏ rồi, chúng ta đi thôi.
+小#2|út, nhỏ nhất|Đây là con trai út của tôi, nó còn một anh trai.
+小姐#0|cô (gọi phụ nữ trẻ)|Cô ơi, cô tên là gì?
+些#0|một số, một ít|Tôi đã mua ít táo.
+些#1|hơn một chút (sau tính từ)|Bệnh của tôi đỡ hơn rồi.
+写#0|viết|Chữ bạn viết rất đẹp.
+谢谢#0|cảm ơn|A: Cảm ơn bạn. B: Không có gì!
+星期#0|tuần; thứ (trong tuần)|Một tuần có bảy ngày.
+学生#0|học sinh, sinh viên|Trường chúng tôi có rất nhiều học sinh.
+学习#0|học, học tập|Bạn có thích học tiếng Trung không?
+学校#0|trường học|Trường chúng tôi rất lớn.
+一#0|một, số 1|Ở đây không có một ai.
+一#1|(giữa động từ lặp lại) thử, một chút|Để tôi xem thử một chút.
+一点儿#0|một chút, một ít|Tôi chỉ có một ít tiền.
+衣服#0|quần áo|Tôi mua rất nhiều quần áo ở cửa hàng.
+医生#0|bác sĩ|Anh ấy là bác sĩ của bệnh viện này.
+医院#0|bệnh viện|Đây là một bệnh viện lớn.
+椅子#0|cái ghế|Con chó con ở dưới ghế.
+有#0|có (sở hữu)|Tôi có một con gái.
+有#1|có (tồn tại)|Trên bàn có cuốn sách.
+月#0|tháng|Một năm có 12 tháng.
+再见#0|tạm biệt|Mẹ ơi, con đi học đây, tạm biệt mẹ.
+在#0|ở, tại|Sách ở trên bàn.
+在#1|đang (làm gì)|Tôi đang ăn cơm.
+怎么#0|thế nào, sao, làm sao|Bạn đi Bắc Kinh bằng cách nào?
+怎么样#0|thế nào, ra sao|Chúng ta đi xem phim, thế nào?
+这#0|này, đây; chỗ này|Người này là bạn học của tôi. / Tôi ngồi ở đây được không?
+中国#0|Trung Quốc|Tôi học tiếng Trung ở Trung Quốc.
+中午#0|buổi trưa|Trưa nay tôi đến ga tàu.
+住#0|ở, sống|Anh ấy đã sống ở Bắc Kinh nhiều năm.
+桌子#0|cái bàn|Máy tính ở trên bàn.
+字#0|chữ (chữ Hán)|Chữ này bạn có biết không?
+昨天#0|hôm qua|Hôm qua anh ấy không đến trường.
+坐#0|ngồi|Anh ấy ngồi trước ti vi cả buổi chiều.
+坐#1|đi (bằng xe, tàu, máy bay)|Tôi đi máy bay đến Trung Quốc.
+做#0|làm, nấu|Hôm nay mẹ nấu rất nhiều món.
+做#1|làm (nghề), làm (công việc)|Bạn làm nghề gì?
+做#2|làm (bài tập, việc)|Ngày nào tôi cũng làm bài tập.
+吧#0|chắc là… nhỉ (phỏng đoán)|Bạn là học sinh nhỉ?
+吧#1|đi, nhé (đề nghị, mệnh lệnh)|Anh đi đi!
+白#0|trắng|Tôi rất thích mặc bộ quần áo trắng đó.
+百#0|trăm|Chiếc xe đạp này hơn năm trăm tệ.
+帮助#0|giúp, giúp đỡ|Giúp tôi tìm một công ty chuyển nhà được không?
+报纸#0|báo, tờ báo|Sáng nào tôi cũng đọc báo.
+比#0|so với, hơn (so sánh)|Con tôi cao hơn tôi.
+别#0|đừng|Muộn quá rồi, đừng xem ti vi nữa.
+长#0|dài|Chị gái chân dài, chạy nhanh.
+唱歌#0|hát|Tôi thích hát nhất, tôi hát cho các bạn một bài.
+出#0|ra, đi ra|Tôi đã đi ra khỏi ga tàu rồi.
+出#1|xảy ra, phát sinh|Bạn xem giúp tôi, cái máy tính này bị làm sao?
+出#2|(sau động từ) ra|Nhìn mặt anh ấy, tôi không nhận ra anh ấy buồn.
+穿#0|mặc, đi (giày)|Trời lạnh rồi, mặc thêm quần áo vào.
+次#0|lần (lượng từ)|Tôi đã đi Bắc Kinh một lần.
+从#0|từ|Từ nhà tôi đến công ty lái xe mất 20 phút.
+错#0|sai|Xin lỗi, tôi sai rồi.
+打篮球#0|chơi bóng rổ|Chiều nào tôi cũng đi chơi bóng rổ.
+大家#0|mọi người|Mọi người đừng đợi tôi nữa.
+到#0|đến, tới|9 giờ sáng tôi đến công ty.
+得#0|(trợ từ nối bổ ngữ mức độ / kết quả)|Bạn đi nhanh quá.
+等#0|đợi, chờ|Bạn phải đợi tôi thêm 10 phút nữa.
+弟弟#0|em trai|Trong nhà tôi là lớn nhất, dưới tôi còn hai em trai.
+第一#0|thứ nhất, đầu tiên|Đây là lần đầu tiên tôi gặp anh ấy.
+懂#0|hiểu|Ý của bạn tôi hiểu rồi.
+对#0|đúng|Bạn đúng, tôi sai rồi.
+房间#0|phòng|Hai chúng tôi ở một phòng.
+非常#0|rất, vô cùng|Bà rất thích món quà chúng tôi tặng.
+服务员#0|nhân viên phục vụ|Tôi làm phục vụ ở nhà hàng.
+高#0|cao|Tôi còn cao hơn cả bố.
+告诉#0|nói cho biết, bảo|Bạn có thể chỉ cho tôi đường đến trường không?
+哥哥#0|anh trai|Anh trai tôi hơn tôi ba tuổi.
+给#0|đưa, cho|Hãy đưa cuốn sách này cho anh ấy.
+给#1|cho (ai), giúp (ai)|Cái này mua cho bạn đấy.
+公共汽车#0|xe buýt|Đi xe buýt mất 20 phút.
+公司#0|công ty|Tôi làm việc ở một công ty.
+狗#0|con chó|Con gái rất thích chó con.
+贵#0|đắt|Chiếc đồng hồ này rất đắt.
+过#0|đã từng (sau động từ)|Tôi chưa đọc cuốn sách này bao giờ.
+还#0|vẫn, còn|Anh ấy vẫn chưa đến.
+还#1|còn, ngoài ra còn|Ngoài không ăn thịt, tôi còn không ăn trứng.
+孩子#0|con (cái)|Tôi có ba đứa con.
+孩子#1|trẻ em, đứa trẻ|Ở đây bé gái nhiều hơn bé trai.
+好吃#0|ngon|Cơm bác nấu ngon thật.
+黑#0|đen, tối|Tôi không thích quần áo màu đen.
+红#0|đỏ|Xe đạp của tôi màu đỏ.
+欢迎#0|chào mừng, hoan nghênh|Chào mừng các bạn đến nhà chúng tôi.
+回答#0|trả lời|Tôi trả lời được câu hỏi này.
+回答#1|câu trả lời|Câu trả lời của bạn chưa làm người ta hài lòng.
+火车站#0|ga tàu hỏa|3 giờ chiều tôi đi ga tàu.
+机场#0|sân bay|Tôi đã làm việc ở sân bay ba năm rồi.
+鸡蛋#0|trứng gà|Sáng nào tôi cũng ăn một quả trứng.
+件#0|chiếc, việc (lượng từ cho quần áo, sự việc)|Màu của chiếc áo này rất đẹp.
+教室#0|phòng học|Mời mọi người vào phòng học để học.
+姐姐#0|chị gái|Tôi có hai chị gái.
+介绍#0|giới thiệu|Để tôi giới thiệu bạn của tôi một chút.
+介绍#1|lời giới thiệu, bài giới thiệu|Tôi đã đọc bài giới thiệu về bộ phim này trên báo.
+进#0|vào|Tôi sắp vào sân bay rồi.
+近#0|gần|Nhà chúng tôi cách công ty rất gần.
+近#1|thân, gần gũi|Tôi và Tiểu Vương rất thân.
+就#0|(khẳng định) chính, đã… mà|Tôi biết ngay là anh ấy sẽ đến mà.
+就#1|liền, ngay|Tôi vừa về đến nhà là gọi điện cho anh ấy ngay.
+觉得#0|cảm thấy, thấy rằng|Bạn thấy cuốn sách này thế nào?
+咖啡#0|cà phê|Ông muốn uống cà phê hay trà?
+开始#0|bắt đầu|Chúng ta bắt đầu học từ bài mười.
+开始#1|lúc đầu, ban đầu|(Học chữ Hán) lúc đầu có thể thấy hơi khó.
+考试#0|thi, kỳ thi|Để chuẩn bị thi, ngày nào anh ấy cũng học đến khuya.
+可能#0|có thể, có lẽ|Có lẽ tôi không đi làm được.
+可能#1|có thể xảy ra|Việc này hoàn toàn có thể xảy ra.
+可以#0|có thể, được phép|Bạn có thể lái xe của tôi đi làm.
+可以#1|được, tạm được|Món này nấu cũng tạm được.
+课#0|bài (học)|Hôm nay chúng ta học bài một.
+课#1|tiết học, giờ học|Bây giờ chúng ta vào học.
+快#0|nhanh|Anh ấy chạy nhanh thật.
+快#1|sắp (sắp… rồi)|7 giờ 50 rồi, sắp vào học rồi.
+快乐#0|vui vẻ, hạnh phúc|Chúc bạn sinh nhật vui vẻ!
+快乐#1|niềm vui|Con gái mang lại cho tôi rất nhiều niềm vui.
+累#0|mệt|Tôi mệt rồi, muốn nghỉ.
+离#0|cách (khoảng cách)|Nhà tôi cách trường rất gần.
+两#0|hai (trước lượng từ)|Táo hai đồng một cân.
+路#0|đường|Hằng ngày tôi đi bộ đến trường.
+路#1|tuyến (xe buýt)|Chúng ta có thể đi xe buýt tuyến số 10.
+旅游#0|du lịch|Chúng tôi lái xe đi du lịch.
+卖#0|bán|Đồ ở cửa hàng này bán tương đối rẻ.
+慢#0|chậm|Chúng tôi đi rất chậm.
+忙#0|bận|Tuần này tôi rất bận.
+忙#1|bận (làm gì)|Bạn đang bận gì thế?
+猫#0|con mèo|Con mèo nhỏ của bạn đi đâu rồi?
+每#0|mỗi|Ngày nào bạn cũng đọc báo à?
+妹妹#0|em gái|Tôi có hai em gái.
+门#0|cửa|Tôi đợi bạn ngoài cửa.
+门#1|môn (lượng từ cho môn học)|Năm nay tôi có năm môn học.
+男#0|nam, đàn ông|Tôi không quen người đàn ông kia.
+您#0|ngài, ông, bà (kính trọng)|Em chào thầy ạ!
+牛奶#0|sữa bò|Trước khi ngủ hãy uống cốc sữa.
+女#0|nữ, phụ nữ|Bạn có quen người phụ nữ kia không?
+旁边#0|bên cạnh|Bố ở bên cạnh tôi.
+跑步#0|chạy bộ|Sáng nào tôi cũng chạy bộ.
+便宜#0|rẻ|Táo rất rẻ, chúng ta mua ít đi.
+票#0|vé|Tôi phải đến ga tàu mua vé.
+妻子#0|vợ|Vợ tôi đi làm rồi.
+起床#0|thức dậy, ngủ dậy|Tôi dậy lúc bảy giờ sáng.
+千#0|nghìn|Chiếc điện thoại này một nghìn tệ.
+铅笔#0|bút chì|Bạn có thấy bút chì của tôi không?
+晴#0|nắng, quang đãng|Hôm nay trời nắng.
+去年#0|năm ngoái|Tôi đến Bắc Kinh vào tháng 8 năm ngoái.
+让#0|để, cho, bảo (ai làm gì)|Bố anh ấy không cho anh ấy đến.
+让#1|nhường|Anh ấy nhường chỗ cho một cụ già.
+日#0|ngày|Hôm nay là ngày 26 tháng 2 năm 2012.
+上班#0|đi làm|Bảy rưỡi tôi đi làm.
+身体#0|cơ thể; sức khỏe|Hôm nay tôi thấy trong người không khỏe lắm.
+生病#0|bị ốm|Tôi bị ốm, không đi làm được.
+生日#0|sinh nhật|Chúc bạn sinh nhật vui vẻ!
+时间#0|thời gian|Tôi không có thời gian đi Bắc Kinh.
+事情#0|việc, sự việc|Chiều nay bạn có việc gì không?
+手表#0|đồng hồ đeo tay|Chiếc đồng hồ này rất đẹp.
+手机#0|điện thoại di động|Bạn xem, tôi mới mua một chiếc điện thoại.
+送#0|tặng|Tôi tặng bạn một cuốn sách.
+送#1|tiễn, đưa|Tôi đi tiễn một người bạn.
+虽然……但是……#0|tuy… nhưng…|Tuy trời mưa nhưng chúng tôi vẫn muốn đi xem phim.
+它#0|nó (chỉ vật, con vật)|Tôi biết con mèo ở đâu, nó ở dưới bàn.
+踢足球#0|đá bóng|Tôi đang đá bóng với các bạn cùng lớp.
+题#0|câu hỏi, bài (trong bài kiểm tra)|Bài này tôi không làm được.
+跳舞#0|nhảy, khiêu vũ|Em gái biết hát, cũng biết nhảy.
+外#0|ngoài, bên ngoài|Bên ngoài trời mưa rồi.
+外#1|ngoài, khác (không thuộc nhóm mình)|Những học sinh đó là của trường khác.
+完#0|xong, hết|Cuốn sách này tôi đọc xong rồi.
+玩#0|chơi|Nó đang chơi, không học.
+晚上#0|buổi tối|Tối nay tôi không xem ti vi được.
+为什么#0|tại sao|Sao bạn không uống chút nước?
+问#0|hỏi|Thưa thầy, em có thể hỏi thầy một câu không ạ?
+问题#0|câu hỏi, vấn đề|Câu hỏi này khó quá!
+西瓜#0|dưa hấu|Mời ăn miếng dưa hấu.
+希望#0|hy vọng, mong|Tôi mong bạn đừng đi.
+希望#1|niềm hy vọng|Con cái là niềm hy vọng của bố mẹ.
+洗#0|giặt, rửa|Hôm nay tôi phải giặt rất nhiều quần áo.
+洗#1|rửa (ảnh)|Ảnh phải ba ngày mới rửa xong.
+小时#0|giờ, tiếng đồng hồ|Tôi đã đọc sách một tiếng.
+笑#0|cười|Nghe anh ấy nói vậy, chúng tôi đều cười.
+新#0|mới|Đây là bộ quần áo mới tôi mua.
+姓#0|họ (họ tên)|Họ của người Trung Quốc đứng trước tên.
+姓#1|mang họ, họ là|Tôi họ Trương.
+休息#0|nghỉ, nghỉ ngơi|Mệt quá, để tôi nghỉ một chút.
+雪#0|tuyết|Mùa đông năm nay đã có mấy trận tuyết lớn.
+颜色#0|màu sắc|Bạn thích màu nào?
+眼睛#0|mắt|Mắt tôi màu đen.
+羊肉#0|thịt cừu, thịt dê|Có người không thích ăn thịt cừu.
+药#0|thuốc|Thuốc này mỗi ngày uống ba lần.
+要#0|muốn|Tôi muốn đi Bắc Kinh.
+要#1|đòi, yêu cầu, bảo (ai làm gì)|Mẹ bảo tôi đi mua thức ăn.
+要#2|phải, cần|Bạn phải làm việc này cẩn thận.
+要#3|sắp|Sắp mưa rồi.
+要#4|mất, tốn|Một cân rau mất hai đồng.
+也#0|cũng|Bạn đi thì tôi cũng đi.
+一下#0|một chút, một lát|Đợi tôi một chút nhé.
+一起#0|cùng nhau|Tôi và bạn cùng đi Bắc Kinh.
+已经#0|đã|Chúng tôi đã ăn cơm xong rồi.
+意思#0|ý nghĩa, nghĩa|Từ này nghĩa là gì?
+意思#1|ý, ý kiến|Hãy cho tôi biết ý của bạn.
+意思#2|thú vị (有意思)|Bộ phim này hay thật.
+因为……所以……#0|vì… nên…|Vì trời mưa nên tôi không đi chạy bộ.
+阴#0|âm u, nhiều mây|Hôm nay trời âm u.
+游泳#0|bơi|Tôi biết bơi rồi.
+右边#0|bên phải|Người bên phải bác sĩ Vương là ai?
+鱼#0|cá|Dưới nước có rất nhiều cá.
+远#0|xa|Nhà tôi cách công ty rất xa.
+运动#0|vận động, tập thể thao|Chúng tôi đều rất thích thể thao.
+再#0|lại, rồi mới|Ăn cơm xong tôi mới đi cửa hàng.
+再#1|thêm, hơn nữa|Cao thêm chút nữa, bây giờ thấp quá.
+早上#0|buổi sáng (sớm)|Buổi sáng tôi đã nhìn thấy anh ấy.
+丈夫#0|chồng|Chồng tôi làm việc ở bệnh viện.
+找#0|tìm|Anh ấy muốn tìm một công việc.
+着#0|(sau động từ: trạng thái tiếp diễn)|Anh ấy cười nói: “Bạn không biết tôi, nhưng tôi biết bạn.”
+真#0|thật, thật là|Người này cao thật.
+正在#0|đang (làm gì)|Em trai đang chơi bóng rổ.
+知道#0|biết|Tôi không biết bây giờ anh ấy ở đâu.
+准备#0|chuẩn bị; định|Tôi định chủ nhật đi Bắc Kinh.
+准备#1|sự chuẩn bị|Tôi đang chuẩn bị cho kỳ thi.
+自行车#0|xe đạp|Đây là chiếc xe đạp tôi mới mua.
+走#0|đi bộ, đi|Con gái tôi chín tháng đã biết đi.
+走#1|đi, rời đi|Tôi đi đây, tạm biệt!
+最#0|nhất|Cô ấy là bạn thân nhất của tôi.
+左边#0|bên trái|Cái cốc bên trái là của bạn, bên phải là của tôi.
+过#0@guò|sống qua, đón (ngày lễ, sinh nhật)|Hôm nay tôi sinh nhật, bạn bè đều đến.
+过#1@guò|(thời gian) trôi qua|Thời gian trôi nhanh thật, sắp Tết rồi.
+还#0@huán|trả lại|Tôi đã trả sách cho thư viện.

@@ -5,46 +5,56 @@
   {
    "id": "hsk1-core",
    "level": 1,
-   "title": "HSK 1 · Gói cơ bản (tự biên soạn)",
-   "version": "1.0.0",
+   "title": "HSK 1 · 150 từ, 15 bài, 8 mẫu ngữ pháp, 3 bài đọc, 4 bài nghe",
+   "version": "2.0.0",
    "url": "packs/hsk1/pack.json",
    "status": "available",
-   "bytes": 64715
+   "bytes": 416326
   },
   {
    "id": "hsk2-core",
    "level": 2,
-   "title": "HSK 2",
-   "status": "none",
-   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+   "title": "HSK 2 · 151 từ, 16 bài",
+   "version": "2.0.0",
+   "url": "packs/hsk2/pack.json",
+   "status": "available",
+   "bytes": 350000
   },
   {
    "id": "hsk3-core",
    "level": 3,
-   "title": "HSK 3",
-   "status": "none",
-   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+   "title": "HSK 3 · 296 từ, 20 bài",
+   "version": "2.0.0",
+   "url": "packs/hsk3/pack.json",
+   "status": "available",
+   "bytes": 422613
   },
   {
    "id": "hsk4-core",
    "level": 4,
-   "title": "HSK 4",
-   "status": "none",
-   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+   "title": "HSK 4 · 597 từ, 30 bài",
+   "version": "2.0.0",
+   "url": "packs/hsk4/pack.json",
+   "status": "available",
+   "bytes": 829807
   },
   {
    "id": "hsk5-core",
    "level": 5,
-   "title": "HSK 5",
-   "status": "none",
-   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+   "title": "HSK 5 · 1245 từ, 50 bài",
+   "version": "2.0.0",
+   "url": "packs/hsk5/pack.json",
+   "status": "available",
+   "bytes": 376381
   },
   {
    "id": "hsk6-core",
    "level": 6,
-   "title": "HSK 6",
-   "status": "none",
-   "note": "Chưa có dữ liệu. Có thể tự nhập bằng CSV/JSON trong Cá nhân → Quản lý nội dung."
+   "title": "HSK 6 · 2497 từ, 100 bài",
+   "version": "2.0.0",
+   "url": "packs/hsk6/pack.json",
+   "status": "available",
+   "bytes": 778482
   }
  ]
 }

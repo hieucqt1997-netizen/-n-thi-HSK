@@ -1,6 +1,6 @@
 // Ôn tập (flashcard SRS), bài tập, ngữ pháp, đọc, nghe, viết, sổ lỗi sai.
 import { routes, H, S, db, esc, safe, $, main, toast, setTitle, levelData, allWords, getCard, saveCard, logAttempt, addMistake, clearMistakeOnce,
-  rememberLearn, toggles, playBtn, noDataBox, fmtDay, fmtMs, qs, nowISO, saveSettings, onLeave, gen, refresh } from './app.js';
+  rememberLearn, toggles, playBtn, noDataBox, fmtDay, fmtMs, qs, nowISO, saveSettings, onLeave, gen, refresh, getContentVer } from './app.js';
 import { GRADES, todayStr, review, isDue, sortDue, addDays } from './srs.js';
 import { checkAnswer, pinyinEquals, hanziEquals, normalizeHanzi } from './match.js';
 import { shuffle, vocabQuestion } from './quiz.js';
@@ -173,9 +173,9 @@ async function buildQueue(q) {
 routes.flash = async (args, q) => {
   setTitle('Thẻ ghi nhớ', '#/review');
   const key = JSON.stringify(q);
-  if (!F || F.key !== key || F.done) {
+  if (!F || F.key !== key || F.done || F.cv !== getContentVer()) {
     const queue = await buildQueue(q);
-    F = { key, queue, i: 0, flipped: false, requeued: new Set(), stats: { n: 0, again: 0 }, st: {} };
+    F = { key, cv: getContentVer(), queue, i: 0, flipped: false, requeued: new Set(), stats: { n: 0, again: 0 }, st: {} };
   }
   F.gen = gen();
   if (q.lesson) rememberLearn('Thẻ: ' + q.lesson);
@@ -220,9 +220,9 @@ async function drawFlash() {
   let front = '';
   let back = '';
   const exHtml = (w.ex || []).slice(0, 1).map((e) => `<div class="ex"><div class="zh" style="font-size:1.15em">${esc(e.zh)}</div><div class="py-line">${esc(e.py)}</div><div class="muted vi-line">${esc(e.vi)}</div></div>`).join('');
-  const full = `<div class="hz">${esc(w.hanzi)}</div><div class="py">${esc(w.pinyin)}</div><div class="vi">${esc(w.vi)} <small class="muted">${esc(w.pos || '')}</small></div>${exHtml}`;
+  const full = `<div class="hz">${esc(w.hanzi)}</div><div class="py">${esc(w.pinyin)}</div><div class="vi">${esc(card.viMine || w.vi)} <small class="muted">${esc(w.pos || '')}</small></div>${card.viMine ? `<small class="muted">Nghĩa trong gói: ${esc(w.vi)}</small>` : ''}${exHtml}`;
   if (mode === 'hz') { front = `<div class="hz">${esc(w.hanzi)}</div><div class="py hide-able-py">${S.showPy ? esc(w.pinyin) : ''}</div>`; back = full; }
-  if (mode === 'vi') { front = `<div class="vi" style="font-size:1.4em">${esc(w.vi)}</div><small class="muted">${esc(w.pos || '')}</small>`; back = full; }
+  if (mode === 'vi') { front = `<div class="vi" style="font-size:1.4em">${esc(card.viMine || w.vi)}</div><small class="muted">${esc(w.pos || '')}</small>`; back = full; }
   let body;
   if (mode === 'hz' || mode === 'vi') {
     body = `<div class="card flash" data-act="flip" role="button" aria-label="Chạm để lật thẻ">${F.flipped ? back : front}<span class="hint">${F.flipped ? '' : 'Chạm để lật thẻ'}</span></div>`;
@@ -251,7 +251,7 @@ async function drawFlash() {
     const v = $('#tp').value;
     F.cur.st.ans = v;
     F.cur.st.checked = true;
-    F.cur.st.ok = pinyinEquals(v, w.pinyin, S.checkTones);
+    F.cur.st.ok = pinyinEquals(v, [w.pinyin, w.pinyinAlt].filter(Boolean), S.checkTones);
     drawFlash();
   };
   H.fcheck = () => {
@@ -305,7 +305,9 @@ addEventListener('keydown', (e) => {
 
 // ======================= Bài tập (drill) =======================
 let D = null;
+let D_note = '';
 async function buildDrill(q) {
+  D_note = '';
   const d = await levelData(S.level);
   let list = [];
   let title = 'Bài tập';
@@ -326,9 +328,24 @@ async function buildDrill(q) {
     list = (l?.questions || []).map((id) => d.qmap.get(id) || null).filter(Boolean);
     if (!list.length && l?.questions) list = (await Promise.all(l.questions.map((id) => db.get('questions', id)))).filter(Boolean);
     back = '#/listening/' + encodeURIComponent(q.listen);
+  } else if (q.lesson) {
+    title = 'Kiểm tra: ' + q.lesson;
+    back = '#/words?' + qs({ lesson: q.lesson });
+    const ws = d.words.filter((w) => w.lesson === q.lesson);
+    const pool = d.words.length >= 4 ? d.words : (await allWords()).list;
+    const kinds = ['meaning', 'hanzi', 'tone', 'fill'];
+    ws.forEach((w, i) => {
+      for (let t = 0; t < kinds.length; t++) { const qq = vocabQuestion(w, pool, kinds[(i + t) % kinds.length]); if (qq) { list.push(qq); break; } }
+    });
+    const tts = (await media.ttsStatus()).ok;
+    const stored = d.questions.filter((x) => x.lesson === q.lesson);
+    const take = (skill, n) => shuffle(stored.filter((x) => x.skill === skill)).slice(0, n);
+    list.push(...take('writing', 4), ...take('reading', 3), ...(tts ? take('listening', 3) : []));
+    list = shuffle(list);
+    D_note = tts ? '' : 'Máy chưa có giọng đọc tiếng Trung nên bài kiểm tra này không có câu nghe.';
   } else if (q.skill) {
     title = q.skill === 'writing' ? 'Luyện viết' : 'Bài tập';
-    list = shuffle(d.questions.filter((x) => x.skill === q.skill));
+    list = shuffle(d.questions.filter((x) => x.skill === q.skill)).slice(0, 20);
     back = '#/writing';
   } else if (q.src === 'mistakes') {
     title = 'Ôn lỗi sai';
@@ -366,9 +383,9 @@ async function buildDrill(q) {
 
 routes.drill = async (args, q) => {
   const key = JSON.stringify(q);
-  if (!D || D.key !== key || D.finished) {
+  if (!D || D.key !== key || D.finished || D.cv !== getContentVer()) {
     const b = await buildDrill(q);
-    D = { key, ...b, i: 0, st: b.list.map(() => ({})), correct: 0, timed: q.timed ? +q.timed * 60000 : 0, startAt: Date.now() };
+    D = { key, cv: getContentVer(), ...b, i: 0, st: b.list.map(() => ({})), correct: 0, timed: q.timed ? +q.timed * 60000 : 0, startAt: Date.now() };
     if (D.timed) D.endsAt = Date.now() + D.timed;
   }
   setTitle(D.title, D.back);
@@ -394,7 +411,7 @@ function drawDrill() {
   if (D.i >= D.list.length) return finishDrill();
   const q = D.list[D.i];
   const st = D.st[D.i];
-  main.innerHTML = `<div class="progress-line"><span>Câu ${D.i + 1}/${D.list.length}</span><div class="bar"><i style="width:${(D.i / D.list.length) * 100}%"></i></div>
+  main.innerHTML = `${D.i === 0 && D_note && !st.checked ? `<div class="card warn tight"><small>${esc(D_note)}</small></div>` : ''}<div class="progress-line"><span>Câu ${D.i + 1}/${D.list.length}</span><div class="bar"><i style="width:${(D.i / D.list.length) * 100}%"></i></div>
     ${D.timed ? `<span class="timer" id="dtimer">${fmtMs(D.endsAt - Date.now())}</span>` : ''}</div>
     <div class="card">${renderQuestion(q, st, 'practice')}</div>
     <div class="sticky-actions">${st.checked ? `<button class="btn primary block" data-act="next">${D.i + 1 < D.list.length ? 'Câu tiếp' : 'Xem kết quả'}</button>`
@@ -584,6 +601,6 @@ routes.writing = async () => {
   const cnt = (t) => ws.filter((q) => q.type === t).length;
   main.innerHTML = `<div class="card"><p style="margin-top:0">Gồm: sắp xếp từ thành câu (${cnt('order')}), gõ chữ Hán/pinyin (${cnt('fill')}), viết câu tự do có đáp án mẫu (${cnt('open')}).</p>
     <p class="muted" style="font-size:.88em">Câu tự do: ứng dụng KHÔNG tự chấm ngữ pháp. Bạn xem đáp án mẫu và tiêu chí rồi tự đánh giá. Viết tay theo thứ tự nét chưa có trong bản này.</p>
-    <a class="btn primary block" href="#/drill?skill=writing">Bắt đầu luyện viết (${ws.length} câu)</a></div>
+    <a class="btn primary block" href="#/drill?skill=writing">Luyện 20 câu ngẫu nhiên (ngân hàng ${ws.length} câu)</a></div>
     <div class="card info"><b>Gõ chữ Hán trên iPhone:</b> Cài đặt → Cài đặt chung → Bàn phím → Bàn phím → Thêm bàn phím mới → Tiếng Trung giản thể → Bính âm. Khi gõ, chạm 🌐 để đổi bàn phím.</div>`;
 };

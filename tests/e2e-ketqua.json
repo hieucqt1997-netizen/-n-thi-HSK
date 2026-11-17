@@ -10,14 +10,34 @@
   "extra": ""
  },
  {
-  "name": "Tải gói HSK 1 vào IndexedDB",
+  "name": "Cập nhật gói HSK1 v1→v2 giữ tiến độ và đổi sang ID mới",
   "pass": true,
-  "extra": "80"
+  "extra": "(['h1-hao', 'h1-ni', 'h1-nin'], ['w-你-ni3', 'w-好-hao3', 'w-您-nin2'])"
+ },
+ {
+  "name": "Gói HSK1 v2: 150 từ, không còn từ cũ trùng",
+  "pass": true,
+  "extra": "150"
  },
  {
   "name": "Kiểm tra gói đủ offline",
   "pass": true,
   "extra": ""
+ },
+ {
+  "name": "Tải gói HSK 4",
+  "pass": true,
+  "extra": "0.2s"
+ },
+ {
+  "name": "Tải gói HSK 6",
+  "pass": true,
+  "extra": "0.3s"
+ },
+ {
+  "name": "Số từ đã cài theo cấp",
+  "pass": true,
+  "extra": "{1: 150, 6: 2497, 4: 597}"
  },
  {
   "name": "Không có thanh cuộn ngang (iPhone)",
@@ -27,7 +47,7 @@
  {
   "name": "Chấm mức nhớ lưu lịch ôn",
   "pass": true,
-  "extra": "5"
+  "extra": "8"
  },
  {
   "name": "Thẻ \"Quên\" ghi vào sổ lỗi",
@@ -90,6 +110,36 @@
   "extra": ""
  },
  {
+  "name": "Kiểm tra bài có câu hỏi",
+  "pass": true,
+  "extra": "17"
+ },
+ {
+  "name": "Thi thử HSK 4: lắp đề không trùng câu",
+  "pass": true,
+  "extra": "{'vocab': 15, 'fill': 12, 'order': 8}"
+ },
+ {
+  "name": "Thi thử HSK 6: lắp đề không trùng câu",
+  "pass": true,
+  "extra": "{'mean': 15, 'hz': 10, 'tone': 7}"
+ },
+ {
+  "name": "Từ HSK 6 hiện nghĩa Việt và nhãn \"nghĩa tự động\"",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Lưu nghĩa của riêng mình",
+  "pass": true,
+  "extra": ""
+ },
+ {
+  "name": "Tra từ theo nghĩa tiếng Anh",
+  "pass": true,
+  "extra": ""
+ },
+ {
   "name": "Sổ lỗi sai có mục",
   "pass": true,
   "extra": ""
@@ -127,7 +177,7 @@
  {
   "name": "Phục hồi lại đủ tiến độ",
   "pass": true,
-  "extra": "5"
+  "extra": "9"
  },
  {
   "name": "Gộp lần 2 không nhân đôi dữ liệu",
@@ -150,9 +200,9 @@
   "extra": ""
  },
  {
-  "name": "Cập nhật lên 1.0.1 sau khi bấm Cập nhật",
+  "name": "Cập nhật lên 1.1.1 sau khi bấm Cập nhật",
   "pass": true,
-  "extra": "Phiên bản 1.0.1"
+  "extra": "Phiên bản 1.1.1"
  },
  {
   "name": "Cập nhật không mất tiến độ",

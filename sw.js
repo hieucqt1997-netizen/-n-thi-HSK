@@ -1,7 +1,7 @@
 // Service worker: lưu khung ứng dụng để chạy offline.
 // Nội dung bài học + tiến độ nằm trong IndexedDB, KHÔNG bị xóa khi cập nhật.
 // Khi phát hành bản mới: tăng APP_VERSION (cũng đổi ở js/app.js).
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 const SHELL_CACHE = 'sotay-shell-' + APP_VERSION;
 const SHELL = [
   './',

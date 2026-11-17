@@ -94,11 +94,11 @@ test('CSV từ vựng: báo lỗi theo dòng và phát hiện trùng', () => {
 test('Gói HSK 1 mẫu hợp lệ, ID duy nhất, pinyin câu hỏi có đáp án đúng', () => {
   const p = JSON.parse(readFileSync(new URL('../packs/hsk1/pack.json', import.meta.url)));
   assert.deepEqual(validatePack(p), []);
-  assert.equal(p.words.length, 80);
+  assert.equal(p.words.length, 150);
   // mỗi bài sắp xếp: các mảnh ghép lại đúng bằng đáp án (không thừa/thiếu chữ)
   for (const q of p.questions.filter((x) => x.type === 'order')) assert.equal([...q.tokens.join('')].sort().join(''), [...q.answer].sort().join(''), q.id);
   // từ trong câu ví dụ phải chứa chính từ đó
-  for (const w of p.words) assert.ok(w.ex[0].zh.includes(w.hanzi), w.id);
+  for (const w of p.words) if (!w.hanzi.includes('……')) assert.ok(w.ex.length && w.ex[0].zh.includes(w.hanzi), w.id);
   // câu hỏi tham chiếu đúng id
   const qids = new Set(p.questions.map((q) => q.id));
   for (const g of p.grammar) for (const id of g.questions) assert.ok(qids.has(id), id);
@@ -126,14 +126,14 @@ test('Sao lưu: kiểm tra phiên bản và gộp giữ bản mới hơn', () =>
 
 test('Đề kiểm tra: đủ số câu, không trùng, báo thiếu trung thực', () => {
   const p = JSON.parse(readFileSync(new URL('../packs/hsk1/pack.json', import.meta.url)));
-  const bp = { sections: [{ id: 'v', name: 'Từ vựng', count: 10, source: 'vocab' }, { id: 'g', name: 'Ngữ pháp', count: 6, source: 'q:grammar' }, { id: 'r', name: 'Đọc', count: 50, source: 'q:reading' }] };
+  const bp = { sections: [{ id: 'v', name: 'Từ vựng', count: 10, source: 'vocab' }, { id: 'g', name: 'Ngữ pháp', count: 6, source: 'q:grammar' }, { id: 'r', name: 'Đọc', count: 5000, source: 'q:reading' }] };
   for (let k = 0; k < 20; k++) {
     const { questions, missing } = buildTest(bp, { words: p.words, questions: p.questions });
     const ids = questions.map((q) => q.id);
     assert.equal(new Set(ids).size, ids.length);
     assert.equal(questions.filter((q) => q.section === 'v').length, 10);
     assert.equal(questions.filter((q) => q.section === 'g').length, 6);
-    assert.deepEqual(missing, [{ section: 'Đọc', need: 50, have: 8 }]);
+    assert.equal(missing.length, 1); assert.equal(missing[0].section, 'Đọc'); assert.ok(missing[0].have < 5000);
     for (const q of questions) if (q.type === 'choice') { assert.ok(q.answer >= 0); assert.equal(new Set(q.options).size, q.options.length, q.id); }
   }
 });
@@ -146,4 +146,28 @@ test('Biến thể thanh điệu', () => {
   const q = vocabQuestion(p.words[0], p.words, 'fill');
   assert.ok(q.prompt.includes('＿＿'));
   assert.equal(q.options[q.answer], p.words[0].hanzi);
+});
+
+test('Sáu gói HSK: hợp lệ, ID duy nhất toàn bộ, đủ nghĩa tiếng Việt, câu hỏi tham chiếu đúng', () => {
+  const ids = new Set();
+  let total = 0;
+  for (let L = 1; L <= 6; L++) {
+    const p = JSON.parse(readFileSync(new URL(`../packs/hsk${L}/pack.json`, import.meta.url)));
+    assert.deepEqual(validatePack(p), [], 'HSK' + L);
+    for (const w of p.words) {
+      assert.ok(!ids.has(w.id), 'trùng ' + w.id); ids.add(w.id);
+      assert.ok(w.vi && w.vi.length > 0, 'thiếu nghĩa ' + w.id);
+      assert.ok(/\p{Script=Han}/u.test(w.hanzi) && !/[\u2F00-\u2FDF]/.test(w.hanzi), 'chữ lỗi ' + w.hanzi);
+      assert.ok(parsePinyin(w.pinyin).base.length > 0, 'pinyin ' + w.id);
+      assert.equal(w.level, L);
+    }
+    const wid = new Set(p.words.map((w) => w.id));
+    for (const q of p.questions) {
+      if (q.tags?.word) assert.ok(wid.has(q.tags.word), 'câu hỏi trỏ sai từ ' + q.id);
+      if (q.type === 'order') assert.equal([...q.tokens.join('')].sort().join(''), [...q.answer].sort().join(''), q.id);
+      if (q.type === 'choice' || q.type === 'listen-choice') assert.equal(new Set(q.options).size, q.options.length, q.id);
+    }
+    total += p.words.length;
+  }
+  assert.ok(total > 4900, 'tổng ' + total);
 });

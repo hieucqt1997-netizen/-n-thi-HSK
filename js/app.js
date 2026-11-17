@@ -7,7 +7,7 @@ import { BACKUP_FORMAT, BACKUP_SCHEMA, checkBackup, mergeRecords } from './backu
 import * as media from './media.js';
 import { shuffle, vocabQuestion, buildTest } from './quiz.js';
 
-export const APP_VERSION = '1.0.0';
+export const APP_VERSION = '1.1.0';
 
 // ---------- Tiện ích ----------
 const $ = (s, el = document) => el.querySelector(s);
@@ -51,7 +51,9 @@ function applySettings() {
 
 // ---------- Dữ liệu theo cấp ----------
 let cache = {};
-const invalidate = () => { cache = {}; dictCache = null; };
+let contentVer = 0;
+const invalidate = () => { cache = {}; dictCache = null; contentVer++; };
+export const getContentVer = () => contentVer;
 const byOrder = (a, b) => (a.lessonNo ?? 99) - (b.lessonNo ?? 99) || (a.order ?? 1e9) - (b.order ?? 1e9) || String(a.id).localeCompare(String(b.id));
 async function levelData(level) {
   if (cache[level]) return cache[level];
@@ -330,7 +332,7 @@ routes.learn = async () => {
     <h2>Bài học</h2>
     <ul class="list">${lessons.map((l) => {
       const done = l.words.filter((w) => cards.get(w.id)?.due).length;
-      return `<li><a href="#/words?${qs({ lesson: l.name })}"><div class="grow"><b>${esc(l.name)}</b><div class="sub">${done}/${l.words.length} từ đã học</div>
+      return `<li><a href="#/words?${qs({ lesson: l.name })}"><div class="grow"><b>${esc(l.name)}</b> <span class="zh muted">${esc(l.words.slice(0, 4).map((w) => w.hanzi).join(' '))}…</span><div class="sub">${done}/${l.words.length} từ đã học</div>
         <div class="bar" style="margin-top:6px"><i style="width:${(done / l.words.length) * 100}%"></i></div></div><span class="chev">›</span></a></li>`;
     }).join('')}</ul>`;
 };
@@ -354,10 +356,11 @@ routes.words = async (args, q) => {
   rememberLearn(q.lesson || 'Từ vựng HSK ' + S.level);
   main.innerHTML = `
     <div class="row" style="margin-bottom:10px">${link('all', 'Tất cả')}${link('fav', '★ Yêu thích')}${link('hard', 'Chưa thuộc')}${link('conf', 'Dễ nhầm')}</div>
-    ${q.lesson ? `<a class="btn primary block" href="#/flash?${qs({ lesson: q.lesson })}" style="margin-bottom:10px">Học bài này bằng thẻ</a>` : ''}
+    ${q.lesson ? `<div class="grid2" style="margin-bottom:10px"><a class="btn primary" href="#/flash?${qs({ lesson: q.lesson })}">Học bài này bằng thẻ</a><a class="btn" href="#/drill?${qs({ lesson: q.lesson })}">Kiểm tra bài</a></div>` : ''}
+    ${!q.lesson && list.length > 300 ? `<p class="muted" style="font-size:.85em">Đang hiện 300/${list.length} từ. Chọn từng bài ở mục Học tập hoặc dùng Tra từ để xem đủ.</p>` : ''}
     ${toggles()}
-    ${list.length ? `<ul class="list">${list.map((w) => `<li><a href="#/word/${encodeURIComponent(w.id)}"><span class="zh">${esc(w.hanzi)}</span>
-      <div class="grow"><div class="py-line">${esc(w.pinyin)}</div><div class="sub vi-line">${esc(w.vi)}</div></div>
+    ${list.length ? `<ul class="list">${(q.lesson ? list : list.slice(0, 300)).map((w) => `<li><a href="#/word/${encodeURIComponent(w.id)}"><span class="zh">${esc(w.hanzi)}</span>
+      <div class="grow"><div class="py-line">${esc(w.pinyin)}</div><div class="sub vi-line">${esc(cards.get(w.id)?.viMine || w.vi)}</div></div>
       ${cards.get(w.id)?.flags?.fav ? '★' : ''}${wordStatus(cards.get(w.id))}</a></li>`).join('')}</ul>` : '<p class="muted">Không có từ nào trong bộ lọc này.</p>'}`;
 };
 
@@ -373,11 +376,14 @@ routes.word = async ([id]) => {
   main.innerHTML = `
     <div class="card word-head">
       <div class="hz">${esc(w.hanzi)}</div><div class="py">${esc(w.pinyin)}</div>
-      <div style="font-size:1.1em;margin-top:6px">${esc(w.vi)}</div>
+      ${c.viMine ? `<div style="font-size:1.1em;margin-top:6px"><b>${esc(c.viMine)}</b> <small class="chip jade">nghĩa của bạn</small></div>` : ''}
+      <div style="font-size:${c.viMine ? '.95em' : '1.1em'};margin-top:6px" class="${c.viMine ? 'muted' : ''}">${esc(w.vi || '(chưa có nghĩa tiếng Việt)')}</div>
       <div class="row" style="justify-content:center;margin-top:10px">${playBtn(w)}
-        <span class="chip">${esc(w.pos || '—')}</span><span class="chip">HSK ${w.level}</span>${w.packId === 'user' ? '<span class="chip amber">Tự tạo</span>' : ''}</div>
+        <span class="chip">HSK ${w.level}</span>${w.hsk3 ? `<span class="chip" title="Cấp trong danh sách HSK 3.0 (tham khảo)">HSK 3.0: cấp ${w.hsk3 >= 7 ? '7–9' : w.hsk3}</span>` : ''}${w.packId === 'user' ? '<span class="chip amber">Tự tạo</span>' : ''}${w.viSrc === 'cvdict' ? '<span class="chip amber" title="Nghĩa tiếng Việt lấy tự động từ từ điển CVDICT">nghĩa tự động</span>' : ''}</div>
+      ${w.pinyinAlt ? `<small class="muted">Từ điển ghi: ${esc(w.pinyinAlt)} — khi gõ, cả hai cách đều được chấp nhận.</small><br>` : ''}
       <small class="muted">${hasAudio ? 'Âm thanh từ gói học' : 'Chưa có tệp âm thanh — dùng giọng đọc của thiết bị nếu có'}</small>
     </div>
+    ${(w.senses || []).length ? `<div class="card"><h3>Các nghĩa</h3>${w.senses.map((s, i) => `<div class="ex-line"><b>${i + 1}.</b> ${s.pos ? `<span class="chip">${esc(s.pos)}</span> ` : ''}${esc(s.vi || '')}${s.vi ? '<br>' : ''}<small class="muted">EN: ${esc(s.en)}</small></div>`).join('')}</div>` : ''}
     <div class="card"><div class="row between"><h3 style="margin:0">Ví dụ</h3>${toggles()}</div>
       ${(w.ex || []).map((e) => `<div class="ex-line"><div class="zh">${esc(e.zh)} <button class="btn small ghost" data-act="speakText" data-text="${esc(e.zh)}">🔊</button></div><div class="py-line">${esc(e.py)}</div><div class="vi-line muted">${esc(e.vi)}</div></div>`).join('') || '<p class="muted">Chưa có ví dụ.</p>'}
     </div>
@@ -385,13 +391,15 @@ routes.word = async ([id]) => {
     <div class="card"><h3>Đánh dấu</h3><div class="row">
       ${[['fav', '★ Yêu thích'], ['hard', 'Chưa thuộc'], ['conf', 'Dễ nhầm']].map(([k, t]) => `<button class="btn small ${c.flags?.[k] ? 'primary' : ''}" data-act="flag" data-k="${k}">${t}</button>`).join('')}
     </div></div>
-    <div class="card"><h3>Ghi chú cá nhân</h3><textarea id="note" placeholder="Mẹo nhớ, câu tự đặt…">${esc(c.note || '')}</textarea>
-      <button class="btn small" data-act="saveNote" style="margin-top:8px">Lưu ghi chú</button></div>
+    <div class="card"><h3>Nghĩa của bạn & ghi chú</h3>
+      <label class="f"><span>Sửa / viết lại nghĩa tiếng Việt theo cách bạn hiểu (hiện trên thẻ ôn, có trong bản sao lưu)</span><input type="text" id="vimine" value="${esc(c.viMine || '')}" placeholder="${esc(w.vi || '')}"></label>
+      <textarea id="note" placeholder="Mẹo nhớ, câu tự đặt…">${esc(c.note || '')}</textarea>
+      <button class="btn small" data-act="saveNote" style="margin-top:8px">Lưu</button></div>
     <div class="card tight muted"><small>${w.lesson ? esc(w.lesson) + ' · ' : ''}${esc(w.topic || '')}<br>
       ${c.due ? `Lần ôn tới: ${fmtDay(c.due)} · khoảng cách ${c.interval} ngày · sai ${c.wrong || 0} lần` : 'Chưa học'}</small>
       ${w.packId === 'user' ? `<br><a href="#/word-edit/${encodeURIComponent(w.id)}">Sửa từ này</a>` : ''}</div>`;
   H.flag = async (el) => { const cc = await getCard(w.id); cc.flags = { ...(cc.flags || {}), [el.dataset.k]: !cc.flags?.[el.dataset.k] }; await saveCard(cc); el.classList.toggle('primary'); };
-  H.saveNote = async () => { const cc = await getCard(w.id); cc.note = $('#note').value; await saveCard(cc); toast('Đã lưu ghi chú'); };
+  H.saveNote = async () => { const cc = await getCard(w.id); cc.note = $('#note').value; cc.viMine = $('#vimine').value.trim(); await saveCard(cc); toast('Đã lưu'); refresh(); };
 };
 
 routes.dict = async (args, q) => {
@@ -411,7 +419,7 @@ routes.dict = async (args, q) => {
       if (isHan) return w.hanzi.includes(v) || (w.ex || []).some((e) => e.zh.includes(v));
       const wp = parsePinyin(w.pinyin);
       if (pv.base && wp.base.includes(pv.base) && (!hasTone || wp.tones.includes(pv.tones))) return true;
-      return foldVi(w.vi).includes(fv);
+      return foldVi(w.vi).includes(fv) || (fv.length >= 3 && (w.senses || []).some((s) => (s.en || '').toLowerCase().includes(fv)));
     }).slice(0, 100);
     box.innerHTML = res.length ? `<ul class="list">${res.map((w) => `<li><a href="#/word/${encodeURIComponent(w.id)}"><span class="zh">${esc(w.hanzi)}</span><div class="grow"><div class="py-line">${esc(w.pinyin)}</div><div class="sub">${esc(w.vi)}</div></div><span class="chip">HSK ${w.level}</span></a></li>`).join('')}</ul>` : '<p class="muted">Không tìm thấy.</p>';
   };
